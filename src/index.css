@@ -2,37 +2,238 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 @font-face {
   font-family: 'Satoshi';
+  src: url("./assets//fonts/Satoshi-Regular.woff") format("woff");
   font-weight: 400;
-  src: url("./assets/fonts/Satoshi-Medium.woff") format('woff'),
-    url('./assets/fonts/Satoshi-Light.woff') format('woff')
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url("./assets//fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url("./assets/fonts/Satoshi-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url("./assets/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url("./assets/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --gradient-bg: radial-gradient(66.11% 66.11% at 50% 33.89%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, 0) 100%),
+    linear-gradient(278.88deg, #fff, #66e3ff 28.83%, #a787ff 56.31%, #ffc875 86.49%);
 }
 
 body {
   background-color: #090f16;
-  min-height: 100vh;
-  letter-spacing: .025em;
-  position: relative;
+  min-height: 400vh;
+  font-family: 'Satoshi', sans-serif;
 }
 
-h1 {
-  font-family: 'Satoshi', sans-serif;
+::selection {
+  background-color: #66e3ffb5;
+  color: #fff;
 }
 
 @layer components {
   .container-sm {
-    @apply max-sm:px-4 px-8 max-w-[80rem] w-full mx-auto;
+    @apply max-sm:px-6 px-8 lg:max-w-[80rem] w-full mx-auto;
   }
 
-  .container-big {}
+  .container-big {
+    @apply max-sm:px-6 px-8 lg:max-w-[75rem] w-full mx-auto;
+  }
+
+  .full-h {
+    height: calc(100vh - 83px);
+  }
 }
+
 
 .noisy {
   background-image: url("./assets/images/noisy.webp");
 }
 
 .gradient-btn {
-  background: radial-gradient(66.11% 66.11% at 50% 33.89%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, 0) 100%),
-    linear-gradient(278.88deg, #fff, #66e3ff 28.83%, #a787ff 56.31%, #ffc875 86.49%);
+  background: #fff;
+  position: absolute;
+  width: 10px;
+  left: 9px;
+  top: 12px;
+  animation: infi 4s linear infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -0.70em;
+    background: linear-gradient(278.88deg, #fff, #66e3ff 28.83%, #a787ff 56.31%, #ffc875 86.49%);
+    filter: blur(15px);
+    z-index: -1;
+    top: -8px;
+    height: 17px;
+  }
+}
+
+.boxProjet {
+  transform: translateX(-50%) !important;
+  left: 50%;
+}
+
+
+@media (max-width:768px) {
+  .nav.nav-scroll {
+    background-color: #090f16;
+    padding-top: -20px;
+  }
+}
+
+@media (min-width:769px) {
+  .nav.scroll-large {
+    background-color: transparent;
+  }
+}
+
+.contact {
+  position: relative;
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -0.10rem;
+    background: #2c3237;
+    border-radius: 30px;
+    animation: rotation 4s linear infinite;
+    z-index: -1;
+  }
+
+  &:hover {
+
+    &::before,
+    &::after {
+      background: conic-gradient(from var(--gradient-angle), #ffc8752c 0deg, #ffeaca 10deg, #ffc875 25deg, #a787ff 112.5deg, #66e3ff 203.75deg, #d2f7ff 213.75deg, #66e3ff 228.75deg, rgba(42, 138, 246, 0))
+    }
+  }
+}
+
+.title {
+  background: linear-gradient(180deg, #fff, #b7b7b7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 90px;
+}
+
+.subtitle {
+  background-image: var(--gradient-bg);
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: animateColors 10s ease infinite;
+}
+
+.techno-box {
+  box-shadow: 0 0 37px -18px #fff;
+}
+
+.animateBox {
+  animation: animateBoxTechno 8s linear infinite;
+}
+
+.gradient-button {
+  background-image: var(--gradient-bg);
+}
+
+@keyframes infi {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+
+  100% {
+    --gradient-angle: -360deg;
+  }
+}
+
+@keyframes animateColors {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes animateBoxTechno {
+  0% {
+    transform: translate3D(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3D(10px, 10px, 10px);
+  }
+
+  50% {
+    transform: translate3D(7px, 7px, 7px);
+  }
+
+  75% {
+    transform: translate3D(15px, 15px, 15px);
+  }
+
+  100% {
+    transform: translate3D(0, 0, 0);
+  }
 }
