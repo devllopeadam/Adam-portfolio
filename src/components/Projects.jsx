@@ -22,7 +22,7 @@ const Projects = () => {
             return (
               <Anim
                 key={project.name}
-                className="md:p-6 p-4  backdrop-blur-sm rounded-[20px] bg-white bg-opacity-20 border border-white border-opacity-40 flex flex-col gap-6 max-md:max-w-[455px] hover:-translate-y- duration-300 ">
+                className="md:p-6 p-4 backdrop-blur-sm rounded-[20px] bg-white bg-opacity-20 border border-white border-opacity-40 flex flex-col gap-6 max-md:max-w-[455px]">
                 <div className="flex items-center justify-center">
                   <img
                     className="w-full rounded-xl"
@@ -39,7 +39,7 @@ const Projects = () => {
                   </p>
                   <hr className="border-white opacity-10 mt-3" />
                 </div>
-                <div className="flex lg:flex-row flex-col md:items-center gap-5">
+                <div className="flex lg:flex-row flex-col max-md:items-start gap-5">
                   <p className="text-[20px] font-medium text-white">
                     Technologies:
                   </p>
@@ -123,7 +123,7 @@ const Projects = () => {
             return (
               <Anim
                 key={project.name}
-                className="md:p-6 md:col-span-2 p-4 backdrop-blur-sm rounded-[20px] bg-white bg-opacity-20 border border-white border-opacity-40 flex md:flex-row flex-col gap-6 max-md:max-w-[455px]  hover:-translate-y- duration-300 ">
+                className="md:p-6 md:col-span-2 p-4 backdrop-blur-sm rounded-[20px] bg-white bg-opacity-20 border border-white border-opacity-40 flex md:flex-row flex-col gap-6 max-md:max-w-[455px]">
                 <div className="flex items-center justify-center max-h-[270px]">
                   <img
                     className="w-full md:h-full md:max-w-[480px] rounded-xl"
@@ -141,7 +141,7 @@ const Projects = () => {
                     </p>
                     <hr className="border-white opacity-10 mt-3" />
                   </div>
-                  <div className="flex lg:flex-row flex-col md:items-center gap-5">
+                  <div className="flex lg:flex-row flex-col max-md:items-start gap-5">
                     <p className="text-[20px] font-medium text-white">
                       Technologies:
                     </p>

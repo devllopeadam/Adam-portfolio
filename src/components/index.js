@@ -7,6 +7,10 @@ import Projects from "./Projects";
 import Title from "./Title";
 import Project from "./Project";
 import Anim from "./Anim";
+import About from "./About";
+import Word from "./Word";
+import Skills from "./Skills";
+import Cursor from "./Cursor";
 
 export {
   Header,
@@ -17,5 +21,9 @@ export {
   Projects,
   Title,
   Project,
-  Anim
+  Anim,
+  About,
+  Word,
+  Skills,
+  Cursor
 };

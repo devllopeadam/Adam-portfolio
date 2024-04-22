@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Grid, Javascript, React, Sass, Tailwind } from "../assets";
+import { Grid, React, Sass, Tailwind, Vite } from "../assets";
 import TechnologieBox from "./TechnologieBox";
 import GradientButton from "./GradientButton";
 
@@ -20,9 +20,7 @@ const Hero = () => {
   }, [count]);
 
   return (
-    <div
-      id="home"
-      className="w-full max-lg:-z-[1] z-[10] relative">
+    <div className="w-full max-lg:-z-[1] z-[10] relative">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -38,8 +36,8 @@ const Hero = () => {
           {texts.map((text, index) => (
             <motion.span
               key={index}
-              className={`title md:text-7xl text-[54px] font-[700] absolute h-[100px] ${
-                index === count ? "top-0" : "top-full"
+              className={`bg-clip-text text-transparent bg-white-gradient md:text-7xl text-[54px] font-[700] absolute h-[100px] duration-500 ${
+                index === count ? "top-0 opacity-100" : "top-full opacity-0"
               }`}>
               {text}
             </motion.span>
@@ -78,11 +76,11 @@ const Hero = () => {
       />
       <TechnologieBox
         srcImg={Tailwind}
-        positionStyle={`top-[300px] right-[232px] `}
+        positionStyle={`top-[380px] left-[232px] rounded-[5px]`}
       />
       <TechnologieBox
-        srcImg={Javascript}
-        positionStyle={`top-[380px] left-[232px] rounded-[5px] `}
+        srcImg={Vite}
+        positionStyle={`top-[300px] right-[232px]`}
       />
     </div>
   );

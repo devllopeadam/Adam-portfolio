@@ -2,7 +2,7 @@
 const GradientButton = ({ text, otherProperties, link }) => {
   return (
     <a
-      className={`group relative z-50 bg-gradient py-3 px-8 text-black cursor-pointer text-base rounded-full font-semibold transition-all duration-200 hover:-translate-y-1 flex items-center justify-center  ${otherProperties}`}
+      className={`group relative z-50 bg-gradient py-3 px-8 text-black cursor-pointer text-base rounded-full font-semibold transition-all duration-200 hover:-translate-y-1 flex items-center justify-center w-fit mx-auto  ${otherProperties}`}
       target="_blank"
       href={link}>
       {text}

@@ -1,15 +1,16 @@
-import Logo from "./images/Logo.svg";
-import Menu from "./images/Menu.svg";
-import CloseRound from "./images/CloseRound.svg";
-import ArrowBottom from "./images/ArrowBottom.png";
-import CurrentDown from "./images/CaretDown.png";
-import Grid from "./images/grid.webp";
+import Logo from "./images/icons/Logo.svg";
+import Menu from "./images/icons/Menu.svg";
+import CloseRound from "./images/icons/CloseRound.svg";
+import ArrowBottom from "./images/icons/ArrowBottom.png";
+import CurrentDown from "./images/icons/CaretDown.png";
+import Grid from "./images/patterns/grid.webp";
 
 
 import Sass from "./images/technologies/Sass.svg";
 import React from "./images/technologies/React.svg";
 import Tailwind from "./images/technologies/Tailwind.svg";
 import Javascript from "./images/technologies/Javascript.svg";
+import Vite from "./images/technologies/vite.svg";
 import Html from "./images/technologies/Html.png";
 import Css from "./images/technologies/Css.png";
 import Api from "./images/technologies/Api.png";
@@ -17,6 +18,7 @@ import ReactRounterDom from "./images/technologies/ReactRounterDom.svg";
 import Framer from "./images/technologies/Framer.png";
 import Github from "./images/technologies/github-mark.svg";
 import LiveSite from "./images/technologies/LiveSite.png";
+import Bootstrap from './images/technologies/Bootstrap.svg';
 
 import RestCountriesApi from "./images/screenshots/Rest-countries-api.webp";
 import CoinUp from "./images/screenshots/CoinUp.jpeg";
@@ -43,6 +45,8 @@ export {
   Framer,
   Github,
   LiveSite,
+  Vite,
+  Bootstrap,
 
   RestCountriesApi,
   CoinUp,

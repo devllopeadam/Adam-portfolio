@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, LiveSite, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind } from "../assets";
+import { Api, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, LiveSite, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind, Vite } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -67,7 +67,7 @@ const projects = [
     ]
   },
   {
-    name: "GitHub user search app",
+    name: "GitHub User search app color theme switcher",
     description: "Developed a dynamic GitHub User Profile Viewer leveraging the GitHub Users API, offering a seamless display of user profiles with comprehensive information",
     imgProjet: GithubUserSearch,
     technologies: [
@@ -104,8 +104,21 @@ const projects = [
 
 ];
 
+const skills = [
+  { imgSkill: Html, skill: "HTML", level: "Advanced", href: "https://developer.mozilla.org/fr/docs/Web/html" },
+  { imgSkill: Css, skill: "CSS", level: "Advanced", href: "https://developer.mozilla.org/fr/docs/Web/css" },
+  { imgSkill: Javascript, skill: "JavaScript", level: "Intermediate-Advanced", href: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+  { imgSkill: Sass, skill: "Sass", level: "Advanced", href: "https://sass-lang.com/" },
+  { imgSkill: Bootstrap, skill: "Bootstrap", level: "Advanced", href: "https://getbootstrap.com/" },
+  { imgSkill: Tailwind, skill: "Tailwind", level: "Intermediate-Advanced", href: "https://tailwindcss.com/" },
+  { imgSkill: Framer, skill: "Framer Motion", level: "Beginner", href: "https://www.framer.com/motion/" },
+  { imgSkill: React, skill: "ReactJS", level: "Intermediate-Advanced", href: "https://react.dev/" },
+  { imgSkill: Vite, skill: "Vite", level: "Advanced", href: "https://vitejs.dev//" },
+  { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
+];
 export {
   links,
   linksMobile,
-  projects
+  projects,
+  skills
 };

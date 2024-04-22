@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -20,8 +21,8 @@ const Title = ({ text }) => {
       transition={{ duration: 0.2, delay: 0.25 }}
       initial="hidden"
       animate={controls}
-      className="text-white text-center relative z-20 text-2xl uppercase font-extrabold">
-      <h1>{text}</h1>
+      className="bg-clip-text text-transparent bg-white-gradient text-center relative z-20 text-lg uppercase font-extrabold">
+      {text}
     </motion.div>
   );
 };

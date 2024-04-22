@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -10,6 +11,7 @@ const Anim = ({ children, className }) => {
   useEffect(() => {
     isInView && controls.start("visible");
   }, [isInView]);
+
   return (
     <motion.div
       ref={ref}
@@ -17,7 +19,7 @@ const Anim = ({ children, className }) => {
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -70 },
       }}
-      transition={{ delay: 0.3 }}
+      transition={{ duration: 0.5 }}
       initial="hidden"
       animate={controls}
       className={className}>

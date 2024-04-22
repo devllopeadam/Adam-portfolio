@@ -39,6 +39,13 @@
 @font-face {
   font-family: 'Satoshi';
   src: url("./assets/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: italic
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url("./assets/fonts/Satoshi-Bold.woff") format("woff");
   font-weight: 900;
   font-style: normal
 }
@@ -51,11 +58,16 @@ html {
 :root {
   --gradient-bg: radial-gradient(66.11% 66.11% at 50% 33.89%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, 0) 100%),
     linear-gradient(278.88deg, #fff, #66e3ff 28.83%, #a787ff 56.31%, #ffc875 86.49%);
+  --body-bg: #090f16;
+}
+
+[data-theme="dark"] {
+  --body-bg: #F7F7F7;
 }
 
 body {
-  background-color: #090f16;
-  min-height: 400vh;
+  background-color: var(--body-bg);
+  min-height: 600vh;
   font-family: 'Satoshi', sans-serif;
 }
 
@@ -78,9 +90,14 @@ body {
   }
 }
 
+.cursor {
+  animation-fill-mode: forwards;
+  transition-duration: 500;
+}
+
 
 .noisy {
-  background-image: url("./assets/images/noisy.webp");
+  background-image: url("./assets/images/patterns/noisy.webp");
 }
 
 .gradient-btn {
@@ -149,13 +166,6 @@ body {
   }
 }
 
-.title {
-  background: linear-gradient(180deg, #fff, #b7b7b7);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  line-height: 90px;
-}
 
 .subtitle {
   background-image: var(--gradient-bg);

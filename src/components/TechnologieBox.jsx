@@ -18,7 +18,7 @@ const TechnologieBox = ({ srcImg, positionStyle }) => {
         active ? "animateBox" : ""
       }`}>
       <img
-        className="max-w-full select-none"
+        className=" select-none max-w-[36px]"
         src={srcImg}
       />
     </motion.div>
