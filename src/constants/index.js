@@ -116,9 +116,29 @@ const skills = [
   { imgSkill: Vite, skill: "Vite", level: "Advanced", href: "https://vitejs.dev//" },
   { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
 ];
+
+const textScroll = [
+  "Developer",
+  "·",
+  "JavaScript",
+  "·",
+  "Frontend",
+  "·",
+  "ReactJS",
+  "·"
+];
+
+const contacts = [
+  { title: "Email", subtitle: "jeniahadam@gmail.com", buttonText: "Send me an Email", href: "mailto:jeniahadam@gmail.com", type: "simple" },
+  { title: "Phone number", subtitle: "+212 695 26-64-08", buttonText: "Copy number", href: "+212 695 26-64-08", type: "copy" },
+  { title: "LinkedIn", subtitle: "in/adam-jeniah", buttonText: "Visit my LinkedIn", href: "https://www.linkedin.com/in/adam-jeniah/", type: "simple" },
+];
+
 export {
   links,
   linksMobile,
   projects,
-  skills
+  skills,
+  textScroll,
+  contacts
 };

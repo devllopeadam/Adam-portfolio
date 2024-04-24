@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { projects } from "../constants";
-import Project from "./Project";
 import { motion } from "framer-motion";
 import { Title, Anim } from ".";
 import { useState } from "react";

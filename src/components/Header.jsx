@@ -37,7 +37,7 @@ const Header = () => {
         transition={{ duration: 0.3 }}>
         <div className="container-sm">
           <div
-            className={`flex justify-between items-center text-white py-4 h-[83px] ${
+            className={`flex justify-between items-center text-white py-4 h-[83px] relative z-20 ${
               isScrolling
                 ? "nav md:backdrop-blur md:bg-[#22272f] md:px-10 md:rounded-full md:py-2 md:h-[70px] max-md:-mt-5"
                 : ""

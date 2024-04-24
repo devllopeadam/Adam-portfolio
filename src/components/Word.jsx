@@ -89,7 +89,7 @@ const Word = () => {
       onMouseEnter={() => setCursorVariant("text")}
       onMouseLeave={() => setCursorVariant("default")}
       ref={element}
-      className="lg:text-[78px] md:text-[40px] cursor-none text-[40px] font-semibold mt-6 flex max-md:gap-2 flex-wrap items-center justify-center relative">
+      className="lg:text-[78px] max-md:max-w-[550px] mx-auto max-lg:max-w-[650px] md:text-[40px] cursor-none text-[40px] font-semibold mt-6 flex max-md:gap-2 flex-wrap items-center justify-center relative">
       <p className="md:block hidden text-[90px] absolute -left-[40px] top-[100px]">
         🎉
       </p>

@@ -13,6 +13,9 @@ export default {
         "gradient-experience-1": "linear-gradient(180deg,#00c2ff,#ff29c3)",
         "gradient-experience-2": "linear-gradient(180deg,#184bff,#174aff)",
         "white-gradient": "linear-gradient(180deg, #fff, #b7b7b7)",
+      },
+      transitionTimingFunction: {
+        "scroll": "cubic-bezier(.4,0,.2,1)"
       }
     },
   },

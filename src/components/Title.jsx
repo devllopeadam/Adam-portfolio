@@ -21,7 +21,7 @@ const Title = ({ text }) => {
       transition={{ duration: 0.2, delay: 0.25 }}
       initial="hidden"
       animate={controls}
-      className="bg-clip-text text-transparent bg-white-gradient text-center relative z-20 text-lg uppercase font-extrabold">
+      className="bg-clip-text text-transparent bg-white-gradient text-center relative z-20 max-md:text-2xl text-lg uppercase font-extrabold">
       {text}
     </motion.div>
   );

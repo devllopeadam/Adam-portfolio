@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useInView } from "framer-motion";
-import { Cursor, Title, Word } from ".";
-import { useEffect, useRef, useState } from "react";
+import { Title, Word } from ".";
 
 const About = () => {
   return (

@@ -1,4 +1,13 @@
-import { About, Cursor, Header, Hero, Projects, Skills } from "./components";
+import {
+  About,
+  ContactMe,
+  Footer,
+  Header,
+  Hero,
+  HorizontalScroll,
+  Projects,
+  Skills,
+} from "./components";
 
 function App() {
   return (
@@ -14,6 +23,10 @@ function App() {
       <Projects />
       <About />
       <Skills />
+      <HorizontalScroll />
+      <ContactMe />
+      <div className="w-full h-[1px] bg-belowHeader"></div>
+      <Footer />
     </>
   );
 }

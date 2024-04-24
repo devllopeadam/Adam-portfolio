@@ -3,8 +3,9 @@ import Menu from "./images/icons/Menu.svg";
 import CloseRound from "./images/icons/CloseRound.svg";
 import ArrowBottom from "./images/icons/ArrowBottom.png";
 import CurrentDown from "./images/icons/CaretDown.png";
-import Grid from "./images/patterns/grid.webp";
+import Linkedin from "./images/icons/Linkedin.svg";
 
+import Grid from "./images/patterns/grid.webp";
 
 import Sass from "./images/technologies/Sass.svg";
 import React from "./images/technologies/React.svg";
@@ -27,6 +28,7 @@ import Quiz from "./images/screenshots/Quiz.jpg";
 import GithubUserSearch from "./images/screenshots/GithubUserSearch.webp";
 
 
+
 export {
   Logo,
   Menu,
@@ -47,6 +49,7 @@ export {
   LiveSite,
   Vite,
   Bootstrap,
+  Linkedin,
 
   RestCountriesApi,
   CoinUp,
