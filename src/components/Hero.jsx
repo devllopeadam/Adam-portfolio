@@ -55,9 +55,18 @@ const Hero = () => {
           text={"Check Out My CV"}
           otherProperties={"w-fit mx-auto mt-6"}
           link={
-            "https://drive.google.com/file/d/1kqsae22om1lcKCjfeICkL68I7s9puzeg/view?usp=sharing"
+            "https://drive.google.com/file/d/1W6_byW3oiCluiEN3CvW7CLJx_9u0TpS4/view"
           }
         />
+        <a
+          className={`group relative z-50 bg-gradient py-3 px-8 text-black cursor-pointer text-base rounded-full font-semibold transition-all duration-200 hover:-translate-y-1 flex items-center justify-center w-fit mx-auto  ${otherProperties}`}
+          target="_blank"
+          href={
+            "https://drive.google.com/file/d/1W6_byW3oiCluiEN3CvW7CLJx_9u0TpS4/view"
+          }>
+          {"Check Out My CV"}
+          <div className="bg-black bg-opacity-50 transition-all duration-200 opacity-0 group-hover:opacity-100 w-2/3 h-[8px] absolute -bottom-[10px] left-1/2 -z-1 -translate-x-1/2 blur-md"></div>
+        </a>
       </motion.div>
       <img
         width="897"
