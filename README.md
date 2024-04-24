@@ -1,8 +1,13 @@
-# React + Vite
+![Rest Countries](./src/assets/images/screenshots/Portfolio.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Adam's Portfolio 🫡
 
-Currently, two official plugins are available:
+This project (Portfolio) is a React application. It aims to provide a modern and customizable design. The project utilizes Vite for fast development, Framer Motion for smooth animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features 🎉
+
+- **Built with React**: Leveraging React's power for a performant and scalable architecture.
+- **Framer Motion for Animations**: Creating engaging animations and transitions.
+- **Vite for Speed**: Enjoying fast development and build processes.
+- **Tailwind CSS Utility-First Approach**: Rapid styling and streamlined development workflow.
+- **Responsive Design**: Ensuring optimal viewing across various devices.
