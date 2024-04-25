@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Logo } from "../assets";
+import { FrontendMentor, Github, Linkedin, Logo } from "../assets";
 const Footer = () => {
   return (
     <div className="container-sm py-8">
@@ -39,6 +39,15 @@ const Footer = () => {
               loading="lazy"
               className="max-w-7 max-h-7"
               src={Github}
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.frontendmentor.io/profile/devllopeadam">
+            <img
+              loading="lazy"
+              className="max-w-7 max-h-7"
+              src={FrontendMentor}
             />
           </a>
         </div>
