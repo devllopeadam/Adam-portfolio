@@ -4,7 +4,7 @@ import CloseRound from "./images/icons/CloseRound.svg";
 import ArrowBottom from "./images/icons/ArrowBottom.png";
 import CurrentDown from "./images/icons/CaretDown.png";
 import Linkedin from "./images/icons/Linkedin.svg";
-import FrontendMentor from "./images/icons/FrontendMentor.png";
+import FrontendMentor from "./images/icons/FrontendMentor.svg";
 
 import Grid from "./images/patterns/grid.webp";
 
