@@ -10,7 +10,7 @@ import Grid from "./images/patterns/grid.webp";
 
 import Sass from "./images/technologies/Sass.svg";
 import React from "./images/technologies/React.svg";
-import Tailwind from "./images/technologies/Tailwind.svg";
+import Tailwind from "./images/technologies/Tailwind.png";
 import Javascript from "./images/technologies/Javascript.svg";
 import Vite from "./images/technologies/vite.svg";
 import Html from "./images/technologies/Html.png";
