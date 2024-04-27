@@ -55,7 +55,7 @@ const Hero = () => {
           text={"Check Out My CV"}
           otherProperties={"w-fit mx-auto mt-6"}
           link={
-            "https://drive.google.com/file/d/1W6_byW3oiCluiEN3CvW7CLJx_9u0TpS4/view"
+            "https://drive.google.com/uc?export=download&id=1W6_byW3oiCluiEN3CvW7CLJx_9u0TpS4"
           }
         />
       </motion.div>
