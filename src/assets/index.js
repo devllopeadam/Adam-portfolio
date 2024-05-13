@@ -1,3 +1,5 @@
+// Icons
+
 import Logo from "./images/icons/Logo.svg";
 import Menu from "./images/icons/Menu.svg";
 import CloseRound from "./images/icons/CloseRound.svg";
@@ -7,7 +9,7 @@ import Linkedin from "./images/icons/Linkedin.svg";
 import FrontendMentor from "./images/icons/FrontendMentor.svg";
 
 import Grid from "./images/patterns/grid.webp";
-
+// Technologies
 import Sass from "./images/technologies/Sass.svg";
 import React from "./images/technologies/React.svg";
 import Tailwind from "./images/technologies/Tailwind.png";
@@ -22,11 +24,14 @@ import Github from "./images/technologies/github-mark.svg";
 import LiveSite from "./images/technologies/LiveSite.png";
 import Bootstrap from './images/technologies/Bootstrap.svg';
 
+// Screenshots
 import RestCountriesApi from "./images/screenshots/Rest-countries-api.webp";
 import CoinUp from "./images/screenshots/CoinUp.jpeg";
 import Dictionary from "./images/screenshots/Dictionary.webp";
 import Quiz from "./images/screenshots/Quiz.jpg";
 import GithubUserSearch from "./images/screenshots/GithubUserSearch.webp";
+import Pomorodo from "./images/screenshots/Pomorodo.webp";
+import Audiofile from "./images/screenshots/Audiofile.webp";
 
 
 
@@ -57,5 +62,7 @@ export {
   CoinUp,
   Dictionary,
   Quiz,
-  GithubUserSearch
+  GithubUserSearch,
+  Pomorodo,
+  Audiofile
 };

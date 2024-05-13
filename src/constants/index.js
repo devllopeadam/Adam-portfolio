@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, LiveSite, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind, Vite } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind, Vite } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -81,6 +81,40 @@ const projects = [
     links: [
       { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Github-user-search-" },
       { name: "Live Preview", img: LiveSite, href: "https://github-user-search-nc1h.vercel.app/" }
+    ]
+  },
+  {
+    name: "Pomodoro app",
+    description: "an open-source project helps you harness the Pomodoro Technique to accomplish more in less time to supercharge your productivity!",
+    imgProjet: Pomorodo,
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html6" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript6" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react5" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer5" },
+      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass3" },
+
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/pomorodo-app" },
+      { name: "Live Preview", img: LiveSite, href: "https://pomorodo-app.vercel.app/" }
+    ]
+  },
+  {
+    name: "Audiophile e-commerce website",
+    description: "Revolutionizing online audio shopping with React, Vite, and Tailwind CSS.Seamlessly immersive, just like a real store.",
+    imgProjet: Audiofile,
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html7" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript7" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react6" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer6" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind3" },
+      { name: "React Router DOM", img: ReactRounterDom, href: "https://reactrouter.com/", id: "reactdom1" },
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/e-commerce-app-master" },
+      { name: "Live Preview", img: LiveSite, href: "https://e-commerce-app-master.vercel.app/" }
     ]
   },
   {
