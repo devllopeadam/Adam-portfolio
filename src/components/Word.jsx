@@ -39,7 +39,6 @@ const Word = () => {
   const [cursorVariant, setCursorVariant] = useState("default");
   const [visibility, setVisibility] = useState(true);
   // for the custom cursor
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (isInView && latest > 2200 && latest < 2700) {
@@ -49,47 +48,18 @@ const Word = () => {
     }
   });
   //  to remove
-  const variants = {
-    default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      mixBlendMode: "difference",
-    },
-  };
 
   const { scrollYProgress } = useScroll({
     target: element,
     offset: ["start 0.9", "start start"],
   });
 
-  useEffect(() => {
-    const mouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", mouseMove);
-    document.documentElement.addEventListener("mouseleave", () =>
-      setVisibility(false)
-    );
-    document.documentElement.addEventListener("mouseenter", () =>
-      setVisibility(true)
-    );
-
-    return () => window.removeEventListener("mousemove", mouseMove);
-  }, [mousePosition]);
-
   return (
     <motion.p
       onMouseEnter={() => setCursorVariant("text")}
       onMouseLeave={() => setCursorVariant("default")}
       ref={element}
-      className="lg:text-[78px] max-md:max-w-[550px] mx-auto max-lg:max-w-[650px] md:text-[40px] cursor-none text-[40px] font-semibold mt-6 flex max-md:gap-2 flex-wrap items-center justify-center relative">
+      className="lg:text-[78px] max-md:max-w-[550px] mx-auto max-lg:max-w-[650px] md:text-[40px] text-[40px] font-semibold mt-6 flex max-md:gap-2 flex-wrap items-center justify-center relative">
       <p className="md:block hidden text-[90px] absolute -left-[40px] top-[100px]">
         🎉
       </p>
@@ -109,27 +79,6 @@ const Word = () => {
           </Span>
         );
       })}
-      {inView && (
-        <motion.div
-          style={
-            visibility
-              ? cursorVariant === "default"
-                ? {
-                    top: mousePosition.y - 16 + "px",
-                    left: mousePosition.x - 16 + "px",
-                  }
-                : {
-                    top: mousePosition.y - 75 + "px",
-                    left: mousePosition.x - 75 + "px",
-                    height: 150,
-                    width: 150,
-                    mixBlendMode: "difference",
-                  }
-              : { opacity: 0 }
-          }
-          className={`cursor max-md:hidden cursor-none w-8 h-8 rounded-full bg-[#b4b3f8] fixed pointer-events-none top-0 left-0`}
-        />
-      )}
     </motion.p>
   );
 };

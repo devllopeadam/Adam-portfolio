@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { CurrentDown } from "../assets";
 
-const Project = ({ imgProjet, description, technologies, links }) => {
+const Project = ({ name, imgProjet, description, technologies, links }) => {
   const [toShow, setToShow] = useState(null);
   const handleHover = (value) => setToShow(value);
 
