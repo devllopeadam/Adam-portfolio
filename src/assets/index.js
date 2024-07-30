@@ -23,6 +23,8 @@ import Framer from "./images/technologies/Framer.png";
 import Github from "./images/technologies/github-mark.svg";
 import LiveSite from "./images/technologies/LiveSite.png";
 import Bootstrap from './images/technologies/Bootstrap.svg';
+import Typescript from './images/technologies/ts.png';
+import NextJs from "./images/technologies/next-js.svg";
 
 // Screenshots
 import RestCountriesApi from "./images/screenshots/Rest-countries-api.webp";
@@ -55,6 +57,8 @@ export {
   LiveSite,
   Vite,
   Bootstrap,
+  Typescript,
+  NextJs,
   Linkedin,
   FrontendMentor,
 

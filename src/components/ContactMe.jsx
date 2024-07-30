@@ -31,7 +31,7 @@ const ContactMe = () => {
         <img
           width="897"
           height="599"
-          className="absolute md:top-[-200px] xl:scale-125 md:max-w-full md:max-h-full left-1/2 -translate-x-1/2 -z-[1]"
+          className="absolute md:top-[-125px] xl:scale-125 md:max-w-full md:max-h-full left-1/2 -translate-x-1/2 -z-[1]"
           src={Grid}
         />
       </div>

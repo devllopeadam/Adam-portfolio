@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind, Vite } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind, NextJs } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -135,19 +135,19 @@ const projects = [
       { name: "Live Preview", img: LiveSite, href: "https://coin-up-devllopeadams-projects.vercel.app/" }
     ]
   }
-
 ];
 
 const skills = [
   { imgSkill: Html, skill: "HTML", level: "Advanced", href: "https://developer.mozilla.org/fr/docs/Web/html" },
   { imgSkill: Css, skill: "CSS", level: "Advanced", href: "https://developer.mozilla.org/fr/docs/Web/css" },
   { imgSkill: Javascript, skill: "JavaScript", level: "Intermediate-Advanced", href: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
+  { imgSkill: Typescript, skill: "Typescript", level: "Intermediate-Advanced", href: "https://typescriptlang.org" },
   { imgSkill: Sass, skill: "Sass", level: "Advanced", href: "https://sass-lang.com/" },
   { imgSkill: Bootstrap, skill: "Bootstrap", level: "Advanced", href: "https://getbootstrap.com/" },
   { imgSkill: Tailwind, skill: "Tailwind", level: "Intermediate-Advanced", href: "https://tailwindcss.com/" },
   { imgSkill: Framer, skill: "Framer Motion", level: "Beginner", href: "https://www.framer.com/motion/" },
   { imgSkill: React, skill: "ReactJS", level: "Intermediate-Advanced", href: "https://react.dev/" },
-  { imgSkill: Vite, skill: "Vite", level: "Advanced", href: "https://vitejs.dev//" },
+  { imgSkill: NextJs, skill: "NextJS", level: "Intermediate-Advanced", href: "https://nextjs.org/" },
   { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
 ];
 
@@ -159,7 +159,9 @@ const textScroll = [
   "Frontend",
   "·",
   "ReactJS",
-  "·"
+  "·",
+  "NextJS",
+  "."
 ];
 
 const contacts = [
