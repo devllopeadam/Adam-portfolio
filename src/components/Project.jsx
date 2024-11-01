@@ -1,11 +1,35 @@
 /* eslint-disable react/prop-types */
+import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { CurrentDown } from "../assets";
+import { useState, useCallback, useEffect } from "react";
+import { CurrentDown, LeftArrow, RightArrow } from "../assets";
 
-const Project = ({ name, imgProjet, description, technologies, links }) => {
+const Project = ({ name, projectImages, description, technologies, links }) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(false);
   const [toShow, setToShow] = useState(null);
   const handleHover = (value) => setToShow(value);
+  const scrollPrev = useCallback(() => {
+    if (emblaApi && !prevBtnDisabled) emblaApi.scrollPrev();
+  }, [emblaApi, prevBtnDisabled]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi && !nextBtnDisabled) emblaApi.scrollNext();
+  }, [emblaApi, nextBtnDisabled]);
+
+  const updateButtonStates = useCallback(() => {
+    if (!emblaApi) return;
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    updateButtonStates();
+    emblaApi.on("select", updateButtonStates);
+    emblaApi.on("reInit", updateButtonStates);
+  }, [emblaApi, updateButtonStates]);
 
   return (
     <motion.div
@@ -18,12 +42,48 @@ const Project = ({ name, imgProjet, description, technologies, links }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="md:p-6 p-4 backdrop-blur-sm rounded-[20px] bg-white bg-opacity-20 border border-white border-opacity-40 flex flex-col gap-6 max-md:max-w-[455px]">
-      <div className="flex items-center justify-center">
-        <img
-          className="w-full rounded-xl"
-          loading="lazy"
-          src={imgProjet}
-        />
+      <div
+        className="overflow-hidden"
+        ref={emblaRef}>
+        <div className="flex gap-5">
+          {projectImages.map((img) => {
+            return (
+              <div
+                key={img}
+                className="min-w-full min-h-full">
+                <div className="flex items-center justify-center">
+                  <img
+                    className="w-full rounded-xl min-h-full"
+                    loading="lazy"
+                    src={img}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="-mt-11 flex items-center gap-4 justify-center relative z-10">
+        <button
+          onClick={scrollNext}
+          className={`w-9 h-9 rounded-full backdrop-blur-sm bg-white border border-black border-opacity-10 shadow-lg flex items-center justify-center ${
+            nextBtnDisabled ? "opacity-70" : ""
+          }`}>
+          <img
+            src={RightArrow}
+            className="w-[18px]"
+          />
+        </button>
+        <button
+          onClick={scrollPrev}
+          className={`w-9 h-9 rounded-full backdrop-blur-sm bg-white border border-black border-opacity-10 shadow-lg flex items-center justify-center ${
+            prevBtnDisabled ? "opacity-70" : ""
+          }`}>
+          <img
+            src={LeftArrow}
+            className="w-[18px]"
+          />
+        </button>
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-[20px] font-bold text-white text-center">{name}</h1>
@@ -34,7 +94,7 @@ const Project = ({ name, imgProjet, description, technologies, links }) => {
       </div>
       <div className="flex lg:flex-row flex-col max-md:items-start gap-5">
         <p className="text-[20px] font-medium text-white">Technologies:</p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           {technologies.map((technologie) => {
             return (
               <div

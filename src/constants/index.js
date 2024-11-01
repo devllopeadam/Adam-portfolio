@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, RestCountriesApi, Sass, Tailwind, NextJs } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -19,7 +19,7 @@ const projects = [
   {
     name: "REST Countries API with color theme switcher",
     description: "Built a user-friendly country data app using the REST Countries V2 API to show detailed country info in an easy way.",
-    imgProjet: RestCountriesApi,
+    projectImages: [RestCountriesApi1, RestCountriesApi2],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html1" },
       { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass1" },
@@ -27,7 +27,7 @@ const projects = [
       { name: "React", img: React, href: "https://react.dev/", id: "3" },
       { name: "React Router DOM", img: ReactRounterDom, href: "https://reactrouter.com/", id: "reactdom" },
       { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer1" },
-      { name: "API", img: Api, href: "", id: "API1" }
+      { name: "Rest API", img: Api, href: "", id: "API1" }
     ],
     links: [
       { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Rest-Countries-API" },
@@ -37,7 +37,7 @@ const projects = [
   {
     name: "Dictionary App with color theme switcher",
     description: "Access a wealth of definitions effortlessly with our sleek dictionary web app interface.",
-    imgProjet: Dictionary,
+    projectImages: [Dictionary, DictionaryTablet, DictionaryMobile],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html2" },
       { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css1" },
@@ -45,7 +45,7 @@ const projects = [
       { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript2" },
       { name: "React", img: React, href: "https://react.dev/", id: "react2" },
       { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer2" },
-      { name: "API", img: Api, href: "", id: "API2" }
+      { name: "Rest API", img: Api, href: "", id: "API2" }
     ],
     links: [
       { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/dictionary-app-main" },
@@ -55,7 +55,7 @@ const projects = [
   {
     name: "Frontend Quiz app with color theme switcher",
     description: "Crafted an interactive Frontend Quiz App featuring a color theme switcher, enhancing user engagement while showcasing frontend development prowess",
-    imgProjet: Quiz,
+    projectImages: [Quiz, QuizQuestions, QuizTablet, QuizMobile],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html4" },
       { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css3" },
@@ -69,14 +69,14 @@ const projects = [
   {
     name: "GitHub User search app color theme switcher",
     description: "Developed a dynamic GitHub User Profile Viewer leveraging the GitHub Users API, offering a seamless display of user profiles with comprehensive information",
-    imgProjet: GithubUserSearch,
+    projectImages: [GithubUserSearch, GithubTablet, GithubMobile],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html5" },
       { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass2" },
       { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript5" },
       { name: "React", img: React, href: "https://react.dev/", id: "react4" },
       { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer4" },
-      { name: "API", img: Api, href: "", id: "API2" }
+      { name: "Rest API", img: Api, href: "", id: "API2" }
     ],
     links: [
       { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Github-user-search-" },
@@ -86,7 +86,7 @@ const projects = [
   {
     name: "Pomodoro app",
     description: "an open-source project helps you harness the Pomodoro Technique to accomplish more in less time to supercharge your productivity!",
-    imgProjet: Pomorodo,
+    projectImages: [Pomorodo, PomorodoSettings, PomorodoTablet, PomorodoMobile],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html6" },
       { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript6" },
@@ -103,7 +103,7 @@ const projects = [
   {
     name: "Audiophile e-commerce website",
     description: "Revolutionizing online audio shopping with React, Vite, and Tailwind CSS.Seamlessly immersive, just like a real store.",
-    imgProjet: Audiofile,
+    projectImages: [Audiofile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html7" },
       { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript7" },
@@ -120,8 +120,7 @@ const projects = [
   {
     name: "CoinUp",
     description: "CoinUp: Your go-to Crypto Wallet SaaS Website, empowering businesses to enter the crypto wallet market and elevate user experience.",
-    imgProjet: CoinUp,
-    type: "single",
+    projectImages: [CoinUp, CoinUp1, CoinUp2, CoinUp3],
     technologies: [
       { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html3" },
       { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css2" },
@@ -133,6 +132,26 @@ const projects = [
     links: [
       { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/coin-up" },
       { name: "Live Preview", img: LiveSite, href: "https://coin-up-devllopeadams-projects.vercel.app/" }
+    ]
+  },
+  {
+    name: "DevLinks",
+    description: "DevLinks is a customizable link-sharing platform where users can easily manage and share their professional links, projects, and social profiles on a single page",
+    projectImages: [DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister],
+    technologies: [
+      { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css2" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind2" },
+      { name: "TypeScript", img: Typescript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "typescript" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react3" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer3" },
+      { name: "Nextjs", img: NextJs, href: "https://nextjs.org", id: "nextjs" },
+      { name: "Strapi", img: Strapi, href: "https://strapi.io/", id: "strapi" },
+      { name: "React Hook-Form", img: ReactHookForm, href: "https://react-hook-form.com/", id: "React Hook-Form" },
+      { name: "Rest API", img: Api, href: "", id: "API3" }
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/dev-links-frontend" },
+      { name: "Live Preview", img: LiveSite, href: "https://dev-links-frontend-xi.vercel.app/" }
     ]
   }
 ];
@@ -149,6 +168,9 @@ const skills = [
   { imgSkill: React, skill: "ReactJS", level: "Intermediate-Advanced", href: "https://react.dev/" },
   { imgSkill: NextJs, skill: "NextJS", level: "Intermediate-Advanced", href: "https://nextjs.org/" },
   { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
+  { imgSkill: Strapi, skill: "Strapi", level: "Intermediate-Advanced", href: "https://strapi.io/" },
+  { imgSkill: ReactHookForm, skill: "React Hook-Form", level: "Intermediate-Advanced", href: "https://react-hook-form.com" },
+  { imgSkill: ShadcnUi, skill: "Shadcn ui", level: "Intermediate-Advanced", href: "https://ui.shadcn.com/" },
 ];
 
 const textScroll = [
@@ -157,6 +179,8 @@ const textScroll = [
   "JavaScript",
   "·",
   "Frontend",
+  "·",
+  "TypeScript",
   "·",
   "ReactJS",
   "·",
