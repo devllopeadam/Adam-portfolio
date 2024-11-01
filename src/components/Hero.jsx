@@ -51,13 +51,14 @@ const Hero = () => {
           dedicated to crafting beautiful and functional web interfaces that
           elevate user experiences.`}
         </p>
-        <GradientButton
-          text={"Check Out My CV"}
-          otherProperties={"w-fit mx-auto mt-6"}
-          link={
-            "https://drive.google.com/file/d/1Xkh2kOCNg47gsSpC_aTaY3vrJ2muARSN/view?usp=sharing"
-          }
-        />
+        <a
+          href="/public/Adam's-cv.pdf"
+          download="adam Jeniah CV.pdf">
+          <GradientButton
+            text={"Check Out My CV"}
+            otherProperties={"w-fit mx-auto mt-6"}
+          />
+        </a>
       </motion.div>
       <img
         width="897"
