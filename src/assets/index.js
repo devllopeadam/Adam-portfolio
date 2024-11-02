@@ -26,7 +26,7 @@ import Github from "./images/technologies/github-mark.svg";
 import LiveSite from "./images/technologies/LiveSite.png";
 import Bootstrap from './images/technologies/Bootstrap.svg';
 import Typescript from './images/technologies/ts.png';
-import NextJs from "./images/technologies/next-js.svg";
+import NextJs from "./images/technologies/nextjs.png";
 import Strapi from "./images/technologies/strapi.svg";
 import ReactHookForm from "./images/technologies/reactHookForm.svg";
 import ShadcnUi from './images/technologies/shadcn-ui.png';
