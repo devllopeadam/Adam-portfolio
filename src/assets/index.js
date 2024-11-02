@@ -30,6 +30,8 @@ import NextJs from "./images/technologies/nextjs.png";
 import Strapi from "./images/technologies/strapi.svg";
 import ReactHookForm from "./images/technologies/reactHookForm.svg";
 import ShadcnUi from './images/technologies/shadcn-ui.png';
+import Redux from './images/technologies/redux.svg';
+import Gitlab from './images/technologies/gitlab.svg';
 
 // Screenshots
 import RestCountriesApi1 from "./images/screenshots/rest-countries-api/Rest-countries-api.webp";
@@ -94,6 +96,8 @@ export {
   Strapi,
   ReactHookForm,
   ShadcnUi,
+  Redux,
+  Gitlab,
 
   RestCountriesApi1,
   RestCountriesApi2,

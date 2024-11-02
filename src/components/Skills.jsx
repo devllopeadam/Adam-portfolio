@@ -20,10 +20,10 @@ const Skills = () => {
 
   return (
     <div id="skills">
-      <div className="px-6 mx-auto max-w-[950px] flex flex-col gap-14 relative">
+      <div className="px-6 mx-auto max-w-[970px] flex flex-col gap-14 relative">
         <Title text={"Skills"} />
         <div className="min-h-[calc(100vh-50vh)] min-w-[calc(100vw-50vw)] max-w-[780px] max-h-[780px] w-full h-full md:min-h-[780px] md:min-w-[780px] rounded-full opacity-90 absolute top-[520px] md:top-[100%] bg-gradient-experience-1 blur-[150px] -translate-y-1/4 -translate-x-1/2 left-1/2 -z-[1]"></div>
-        <div className="flex justify-center items-center gap-4 max-md:gap-4 flex-wrap mt-10">
+        <div className="flex justify-center items-center gap-x-5 gap-y-4 max-md:gap-4 flex-wrap mt-10 w-full">
           {skills.map((skill, index) => {
             return (
               <motion.a
@@ -34,13 +34,13 @@ const Skills = () => {
                 whileInView={"animate"}
                 viewport={{ once: true }}
                 custom={index}
-                className={`relative p-4 backdrop-blur-sm rounded-[10px] bg-white bg-opacity-20 border border-white border-opacity-40
+                className={`relative p-4 backdrop-blur-sm rounded-[10px] bg-gradient-to-r from-white/25 to-white/15 bg-opacity-20 border border-white border-opacity-40
                   flex md:gap-4 gap-3 items-center z-10`}
                 key={skill.skill}>
                 <div className="skill absolute" />
                 <div className="flex items-center">
                   <img
-                    className="md:max-w-10 max-w-8"
+                    className="md:max-w-8 max-w-7 w-full"
                     loading="lazy"
                     src={skill.imgSkill}
                   />
