@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Grid, React, Sass, Tailwind, Vite } from "../assets";
+import {
+  Framer,
+  Grid,
+  Javascript,
+  NextJs,
+  React,
+  Sass,
+  Tailwind,
+  Typescript,
+  Vite,
+} from "../assets";
 import TechnologieBox from "./TechnologieBox";
 import GradientButton from "./GradientButton";
 
@@ -69,19 +79,51 @@ const Hero = () => {
 
       <TechnologieBox
         srcImg={Sass}
-        positionStyle={`top-[100px] left-[232px]`}
+        overlay={false}
+        className={`top-[15%] left-[17%]`}
       />
       <TechnologieBox
         srcImg={React}
-        positionStyle={`top-[50px] right-[300px] `}
+        overlay={false}
+        className={`top-[11%] right-[20%] `}
       />
       <TechnologieBox
         srcImg={Tailwind}
-        positionStyle={`top-[380px] left-[232px] rounded-[5px]`}
+        overlay={false}
+        className={`top-[70%] left-[15%] rounded-[5px]`}
+      />
+      <TechnologieBox
+        srcImg={NextJs}
+        overlay={false}
+        className={`top-[55%] right-[15%]`}
+      />
+      <TechnologieBox
+        srcImg={Typescript}
+        overlay={true}
+        className={
+          "!w-[35px] !h-[35px] !rounded-md top-[28%] right-[8%] p-[7px] bg-blend-darken"
+        }
       />
       <TechnologieBox
         srcImg={Vite}
-        positionStyle={`top-[300px] right-[232px]`}
+        overlay={true}
+        className={
+          "!w-[30px] !h-[30px] !rounded-md top-[40%] left-[8%] p-[7px] bg-blend-darken"
+        }
+      />
+      <TechnologieBox
+        srcImg={Javascript}
+        overlay={true}
+        className={
+          "!w-[37px] !h-[37px] !rounded-md top-[80%] left-[30%] p-[7px] bg-blend-darken"
+        }
+      />
+      <TechnologieBox
+        srcImg={Framer}
+        overlay={true}
+        className={
+          "!w-[30px] !h-[30px] !rounded-md top-[80%] right-[30%] p-[7px] bg-blend-darken"
+        }
       />
     </div>
   );

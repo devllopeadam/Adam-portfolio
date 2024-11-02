@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const { scrollY } = useScroll();
-  const [active, setActive] = useState("Projects");
+  const [active, setActive] = useState("");
   const [show, setShow] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -44,6 +44,7 @@ const Header = () => {
             }`}>
             <a
               href="#home"
+              onClick={() => setActive("")}
               className="logo cursor-pointer flex items-center gap-3 relative">
               <img
                 src={Logo}
