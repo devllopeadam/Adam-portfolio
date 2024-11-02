@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -163,14 +163,16 @@ const skills = [
   { imgSkill: Typescript, skill: "Typescript", level: "Intermediate-Advanced", href: "https://typescriptlang.org" },
   { imgSkill: Sass, skill: "Sass", level: "Advanced", href: "https://sass-lang.com/" },
   { imgSkill: Bootstrap, skill: "Bootstrap", level: "Advanced", href: "https://getbootstrap.com/" },
-  { imgSkill: Tailwind, skill: "Tailwind", level: "Intermediate-Advanced", href: "https://tailwindcss.com/" },
-  { imgSkill: Framer, skill: "Framer Motion", level: "Beginner", href: "https://www.framer.com/motion/" },
-  { imgSkill: React, skill: "ReactJS", level: "Intermediate-Advanced", href: "https://react.dev/" },
+  { imgSkill: Tailwind, skill: "Tailwind", level: "Advanced", href: "https://tailwindcss.com/" },
+  { imgSkill: React, skill: "ReactJS", level: "Advanced", href: "https://react.dev/" },
   { imgSkill: NextJs, skill: "NextJS", level: "Intermediate-Advanced", href: "https://nextjs.org/" },
-  { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
-  { imgSkill: Strapi, skill: "Strapi", level: "Intermediate-Advanced", href: "https://strapi.io/" },
   { imgSkill: ReactHookForm, skill: "React Hook-Form", level: "Intermediate-Advanced", href: "https://react-hook-form.com" },
+  { imgSkill: Redux, skill: "Redux-Toolkit", level: "Intermediate-Advanced", href: "https://redux-toolkit.js.org/" },
+  { imgSkill: Framer, skill: "Framer Motion", level: "Intermediate", href: "https://www.framer.com/motion/" },
   { imgSkill: ShadcnUi, skill: "Shadcn ui", level: "Intermediate-Advanced", href: "https://ui.shadcn.com/" },
+  { imgSkill: Strapi, skill: "Strapi", level: "Intermediate-Advanced", href: "https://strapi.io/" },
+  { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
+  { imgSkill: Gitlab, skill: "Gitlab", level: "Intermediate-Advanced", href: "https://gitlab.com" },
 ];
 
 const textScroll = [
@@ -185,7 +187,7 @@ const textScroll = [
   "ReactJS",
   "·",
   "NextJS",
-  "."
+  "·"
 ];
 
 const contacts = [
