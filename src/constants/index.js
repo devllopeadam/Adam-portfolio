@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab, Figma } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -163,7 +163,8 @@ const skills = [
   { imgSkill: Typescript, skill: "Typescript", level: "Intermediate-Advanced", href: "https://typescriptlang.org" },
   { imgSkill: Sass, skill: "Sass", level: "Advanced", href: "https://sass-lang.com/" },
   { imgSkill: Bootstrap, skill: "Bootstrap", level: "Advanced", href: "https://getbootstrap.com/" },
-  { imgSkill: Tailwind, skill: "Tailwind", level: "Advanced", href: "https://tailwindcss.com/" },
+  { imgSkill: Tailwind, skill: "Tailwind CSS", level: "Advanced", href: "https://tailwindcss.com/" },
+  { imgSkill: Figma, skill: "UI/UX Design", level: "Intermediate", href: "https://figma.com/" },
   { imgSkill: React, skill: "ReactJS", level: "Advanced", href: "https://react.dev/" },
   { imgSkill: NextJs, skill: "NextJS", level: "Intermediate-Advanced", href: "https://nextjs.org/" },
   { imgSkill: ReactHookForm, skill: "React Hook-Form", level: "Intermediate-Advanced", href: "https://react-hook-form.com" },

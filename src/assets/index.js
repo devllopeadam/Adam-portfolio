@@ -32,6 +32,7 @@ import ReactHookForm from "./images/technologies/reactHookForm.svg";
 import ShadcnUi from './images/technologies/shadcn-ui.png';
 import Redux from './images/technologies/redux.svg';
 import Gitlab from './images/technologies/gitlab.svg';
+import Figma from "./images/technologies/figma.png";
 
 // Screenshots
 import RestCountriesApi1 from "./images/screenshots/rest-countries-api/Rest-countries-api.webp";
@@ -98,6 +99,7 @@ export {
   ShadcnUi,
   Redux,
   Gitlab,
+  Figma,
 
   RestCountriesApi1,
   RestCountriesApi2,
