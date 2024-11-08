@@ -40,7 +40,7 @@ const Skills = () => {
                 <div className="skill absolute" />
                 <div className="flex items-center">
                   <img
-                    className="md:max-w-8 max-w-7 w-full"
+                    className="md:max-w-8 max-w-7 w-full max-h-7"
                     loading="lazy"
                     src={skill.imgSkill}
                   />
