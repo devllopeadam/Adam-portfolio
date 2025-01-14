@@ -5,7 +5,7 @@ import ContactButton from "./ContactButton";
 import { ArrowBottom, CloseRound, Logo, Menu } from "../assets";
 import { useEffect, useState } from "react";
 
-const Header = () => {
+const Header = (isVideoPlaying) => {
   const { scrollY } = useScroll();
   const [active, setActive] = useState("");
   const [show, setShow] = useState(false);
@@ -26,8 +26,8 @@ const Header = () => {
   return (
     <>
       <motion.div
-        className={`nav fixed w-full max-lg:translate-y-0 z-[100] ${
-          showIsScroll && "md:bg-[#090f16] nav-scroll  translate-y-0"
+        className={`nav fixed w-full max-lg:translate-y-0 z-[40] ${
+          showIsScroll && "md:bg-[#090f16] nav-scroll translate-y-0"
         } ${isScrolling && "bg-[#090f16] pt-5 -top-5 scroll-large"}`}
         variants={{
           hidden: { y: "-100%" },
@@ -74,7 +74,7 @@ const Header = () => {
               <ContactButton />
             </div>
             <div
-              className="max-lg:flex items-center justify-center border-[#2c3237] hidden py-[5px] px-1 rounded-[5px]"
+              className="max-lg:flex items-center justify-center border-[#2c3237] hidden py-[5px] px-1 rounded-[5px] cursor-pointer"
               onClick={() => {
                 setIsScrolling(!isScrolling);
                 setShowIsScroll(!showIsScroll);
@@ -92,7 +92,7 @@ const Header = () => {
             initial={{ y: 120 }}
             animate={{ y: 0 }}
             exit={{ y: -120 }}
-            className="absolute backdrop-blur bg-[#090f16ba] z-[100] full-h w-screen top-[100%] left-0 px-6 py-8 text-white flex flex-col gap-8 items-center justify-start pt-32 lg:hidden">
+            className="absolute backdrop-blur bg-[#090f16ba] z-[30] full-h w-screen top-[100%] left-0 px-6 py-8 text-white flex flex-col gap-8 items-center justify-start pt-32 lg:hidden">
             {linksMobile.map((link) => {
               return (
                 <a

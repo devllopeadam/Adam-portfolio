@@ -9,6 +9,8 @@ import Linkedin from "./images/icons/Linkedin.svg";
 import FrontendMentor from "./images/icons/FrontendMentor.svg";
 import RightArrow from "./images/icons/right-arrow.svg";
 import LeftArrow from "./images/icons/left-arrow.svg";
+import PlayVideo from "./images/icons/play-video.svg";
+import Close from "./images/icons/close.svg";
 
 import Grid from "./images/patterns/grid.webp";
 // Technologies
@@ -66,6 +68,9 @@ import DevlinksRegister from "./images/screenshots/devlinks/register.png";
 import DevlinksPreview from "./images/screenshots/devlinks/preview.png";
 import DevlinksProfile from "./images/screenshots/devlinks/profile.png";
 
+// videos
+
+import DevlinksVideo from "./videos/devlinks.mp4"
 
 
 export {
@@ -76,6 +81,8 @@ export {
   CurrentDown,
   RightArrow,
   LeftArrow,
+  PlayVideo,
+  Close,
   Grid,
   Sass,
   React,
@@ -131,4 +138,6 @@ export {
   DevlinksRegister,
   DevlinksPreview,
   DevlinksProfile,
+
+  DevlinksVideo
 };
