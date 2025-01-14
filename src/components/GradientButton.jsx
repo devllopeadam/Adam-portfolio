@@ -7,7 +7,7 @@ const GradientButton = ({ text, otherProperties, link, onclick }) => {
       href={link}
       onClick={onclick}>
       {text}
-      <div className="bg-black bg-opacity-50 transition-all duration-200 opacity-0 group-hover:opacity-100 w-2/3 h-[8px] absolute -bottom-[10px] left-1/2 -z-1 -translate-x-1/2 blur-md"></div>
+      <span className="bg-black bg-opacity-50 transition-all duration-200 opacity-0 group-hover:opacity-100 w-2/3 h-[8px] absolute -bottom-[10px] left-1/2 -z-1 -translate-x-1/2 blur-md"></span>
     </a>
   );
 };
