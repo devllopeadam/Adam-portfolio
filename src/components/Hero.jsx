@@ -63,7 +63,7 @@ const Hero = () => {
         </p>
         <a
           href="/public/Adam's-cv.pdf"
-          download="adam Jeniah CV.pdf">
+          download="Adam-Jeniah-CV.pdf">
           <GradientButton
             text={"Check Out My CV"}
             otherProperties={"w-fit mx-auto mt-6"}

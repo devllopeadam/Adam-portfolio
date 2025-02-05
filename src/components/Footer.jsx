@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
         </div>
         <p className="text-[#7A7F86] text-[15px] font-medium max-md:hidden">
-          &copy; Adam 2024. All rights reserved
+          &copy; Adam 2025. All rights reserved
         </p>
         <div className="flex items-center gap-5">
           <a
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="text-[#7A7F86] text-[15px] mt-6 mx-auto text-center font-medium max-md:block hidden">
-        &copy; Adam 2024. All rights reserved
+        &copy; Adam 2025. All rights reserved
       </p>
     </div>
   );
