@@ -62,7 +62,7 @@ const Hero = () => {
           elevate user experiences.`}
         </p>
         <a
-          href="/public/Adam's-cv.pdf"
+          href="/Adam%27s-cv.pdf"
           download="Adam-Jeniah-CV.pdf">
           <GradientButton
             text={"Check Out My CV"}
