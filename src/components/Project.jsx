@@ -219,9 +219,9 @@ const Project = ({
           </div>
         )}
         <div className="flex flex-col gap-2">
-          <h1 className="text-[20px] font-bold text-white text-center">
+          <h3 className="text-[20px] font-bold text-white text-center">
             {name}
-          </h1>
+          </h3>
           <p className="text-[#dfe5ecca] text-[14px] font-medium w-full">
             {description}
           </p>

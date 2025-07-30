@@ -22,9 +22,9 @@ const ContactMe = () => {
       className="container-big mt-20 z-20 relative flex flex-col gap-5 pb-20">
       <Title text={"Contact Me"} />
       <div className="flex items-center justify-center">
-        <h1 className="bg-clip-text text-transparent bg-white-gradient text-center text-[30px] md:text-[48px] font-extrabold">
+        <h2 className="bg-clip-text text-transparent bg-white-gradient text-center text-[30px] md:text-[48px] font-extrabold">
           Ready to Collaborate?
-        </h1>
+        </h2>
         <span className="bg-transparent text-[30px] md:text-[55px] max-md:hidden">
           👋
         </span>
@@ -41,9 +41,9 @@ const ContactMe = () => {
             <div
               key={contact.title}
               className="flex flex-col gap-2 items-center">
-              <h1 className="bg-clip-text text-transparent bg-white-gradient text-center text-[30px] md:text-[45px] font-extrabold">
+              <h3 className="bg-clip-text text-transparent bg-white-gradient text-center text-[30px] md:text-[45px] font-extrabold">
                 {contact.title}
-              </h1>
+              </h3>
               <p className="text-[17px] text-white text-opacity-60 font-medium">
                 {contact.subtitle}
               </p>

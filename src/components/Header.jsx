@@ -51,7 +51,7 @@ const Header = () => {
                 className="logo w-7"
               />
               <motion.div className="w-full gradient-btn"></motion.div>
-              <h1 className="text-[17px] font-medium">Adam.Dev</h1>
+              <span className="text-[17px] font-medium">Adam.Dev</span>
             </a>
             <div className="sections lg:flex gap-8 items-center hidden">
               {links.map((link) => {
