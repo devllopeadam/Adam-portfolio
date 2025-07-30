@@ -63,7 +63,7 @@ Before submitting a PR:
 
 ## 📬 Contact
 
-- **Portfolio**: [adam-dev-portfolio.vercel.app](https://adam-dev-portfolio.vercel.app/)
+- **Portfolio**: [adam-jeniah.me](https://adam-jeniah.me/)
 - **Email**: [jeniahadam@gmail.com](mailto:jeniahadam@gmail.com)
 - **LinkedIn**: [linkedin.com/in/adam-jeniah](https://www.linkedin.com/in/adam-jeniah/)
 
