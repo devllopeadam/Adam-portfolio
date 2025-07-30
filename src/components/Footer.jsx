@@ -13,7 +13,7 @@ const Footer = () => {
               className="logo w-7"
             />
             <motion.div className="w-full gradient-btn"></motion.div>
-            <h1 className="text-[17px] font-medium">Adam.Dev</h1>
+            <span className="text-[17px] font-medium">Adam.Dev</span>
           </a>
           <p className="text-[#7A7F86] text-[15px] font-medium ">
             jeniahadam@gmail.com
