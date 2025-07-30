@@ -9,6 +9,9 @@ import {
   PlayVideo,
   RightArrow,
 } from "../assets";
+
+// Import E-Inventory logo
+import EInventoryLogo from "../assets/images/icons/logo-Einventory-large.png";
 import Video from "./Video";
 
 const Project = ({
@@ -18,6 +21,7 @@ const Project = ({
   technologies,
   links,
   video,
+  isSpecial = false,
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
@@ -80,23 +84,97 @@ const Project = ({
         <div
           className="overflow-hidden relative"
           ref={emblaRef}>
-          <div className="flex gap-5">
-            {projectImages.map((img) => {
-              return (
-                <div
-                  key={img}
-                  className="min-w-full min-h-full">
-                  <div className="flex items-center justify-center">
-                    <img
-                      className="w-full rounded-xl min-h-full"
-                      loading="lazy"
-                      src={img}
-                    />
-                  </div>
+          {isSpecial && name === "E-Inventory" ? (
+            // Special display for E-Inventory
+            <div className="min-w-full min-h-[300px] bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-800 rounded-xl flex flex-col items-center justify-center relative overflow-hidden group">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-4 left-4 w-20 h-20 border border-white rounded-lg"></div>
+                <div className="absolute bottom-4 right-4 w-16 h-16 border border-white rounded-full"></div>
+                <div className="absolute top-1/2 left-8 w-12 h-12 border border-white rounded-lg transform rotate-45"></div>
+              </div>
+
+              {/* Logo and Content */}
+              <div className="relative z-10 text-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-48 h-18 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-blue-500/25 group-hover:scale-110 transition-all duration-300 p-4">
+                  <img
+                    src={EInventoryLogo}
+                    alt="E-Inventory Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-              );
-            })}
-          </div>
+                <p className="text-blue-200 text-lg mb-6 px-4 font-medium">
+                  Multi-Tenant SaaS Platform
+                </p>
+
+                {/* Features Pills - Smaller and more refined */}
+                <div className="flex flex-wrap gap-2 justify-center mb-8 px-4">
+                  {["Inventory", "Analytics", "Multi-Tenant", "Real-time"].map(
+                    (feature) => (
+                      <span
+                        key={feature}
+                        className="px-4 py-2 bg-white/25 backdrop-blur-md rounded-full text-white text-sm border border-white/30 hover:bg-white/35 hover:border-white/50 hover:scale-105 transition-all duration-300 font-medium shadow-md">
+                        {feature}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+
+              {/* Contact Icon with Tooltip - Small and elegant */}
+              <div className="absolute top-4 right-4 z-20 group/contact">
+                <a
+                  href="#contact"
+                  className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500/40 to-cyan-500/40 backdrop-blur-md rounded-full border-2 border-emerald-400/50 flex items-center justify-center hover:scale-110 hover:from-emerald-500/60 hover:to-cyan-500/60 hover:border-emerald-400/80 transition-all duration-300 shadow-lg hover:shadow-emerald-500/30 cursor-pointer">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
+                  </div>
+
+                  {/* Tooltip - Compact and professional */}
+                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover/contact:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="bg-gray-900/95 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-md whitespace-nowrap shadow-lg border border-gray-700/50">
+                      Demo Access
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-gray-900/95 rotate-45 border-l border-t border-gray-700/50"></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          ) : (
+            // Regular display for other projects
+            <div className="flex gap-5">
+              {projectImages.map((img) => {
+                return (
+                  <div
+                    key={img}
+                    className="min-w-full min-h-full">
+                    <div className="flex items-center justify-center">
+                      <img
+                        className="w-full rounded-xl min-h-full"
+                        loading="lazy"
+                        src={img}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
           {video && (
             <motion.div
               variants={{
@@ -116,28 +194,30 @@ const Project = ({
             </motion.div>
           )}
         </div>
-        <div className="-mt-11 flex items-center gap-4 justify-center relative z-10">
-          <button
-            onClick={scrollNext}
-            className={`w-9 h-9 rounded-full backdrop-blur-sm bg-white border border-black border-opacity-10 shadow-lg flex items-center justify-center ${
-              nextBtnDisabled ? "opacity-70" : ""
-            }`}>
-            <img
-              src={RightArrow}
-              className="w-[18px]"
-            />
-          </button>
-          <button
-            onClick={scrollPrev}
-            className={`w-9 h-9 rounded-full backdrop-blur-sm bg-white border border-black border-opacity-10 shadow-lg flex items-center justify-center ${
-              prevBtnDisabled ? "opacity-70" : ""
-            }`}>
-            <img
-              src={LeftArrow}
-              className="w-[18px]"
-            />
-          </button>
-        </div>
+        {!(isSpecial && name === "E-Inventory") && (
+          <div className="-mt-11 flex items-center gap-4 justify-center relative z-10">
+            <button
+              onClick={scrollNext}
+              className={`w-9 h-9 rounded-full backdrop-blur-sm bg-white border border-black border-opacity-10 shadow-lg flex items-center justify-center ${
+                nextBtnDisabled ? "opacity-70" : ""
+              }`}>
+              <img
+                src={RightArrow}
+                className="w-[18px]"
+              />
+            </button>
+            <button
+              onClick={scrollPrev}
+              className={`w-9 h-9 rounded-full backdrop-blur-sm bg-white border border-black border-opacity-10 shadow-lg flex items-center justify-center ${
+                prevBtnDisabled ? "opacity-70" : ""
+              }`}>
+              <img
+                src={LeftArrow}
+                className="w-[18px]"
+              />
+            </button>
+          </div>
+        )}
         <div className="flex flex-col gap-2">
           <h1 className="text-[20px] font-bold text-white text-center">
             {name}

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab, Figma, DevlinksVideo } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab, Figma, DevlinksVideo, Vite } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
@@ -117,23 +117,23 @@ const projects = [
       { name: "Live Preview", img: LiveSite, href: "https://e-commerce-app-master.vercel.app/" }
     ]
   },
-  {
-    name: "CoinUp",
-    description: "CoinUp: Your go-to Crypto Wallet SaaS Website, empowering businesses to enter the crypto wallet market and elevate user experience.",
-    projectImages: [CoinUp, CoinUp1, CoinUp2, CoinUp3],
-    technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html3" },
-      { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css2" },
-      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind2" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript3" },
-      { name: "React", img: React, href: "https://react.dev/", id: "react3" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer3" }
-    ],
-    links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/coin-up" },
-      { name: "Live Preview", img: LiveSite, href: "https://coin-up-devllopeadams-projects.vercel.app/" }
-    ]
-  },
+  // {
+  //   name: "CoinUp",
+  //   description: "CoinUp: Your go-to Crypto Wallet SaaS Website, empowering businesses to enter the crypto wallet market and elevate user experience.",
+  //   projectImages: [CoinUp, CoinUp1, CoinUp2, CoinUp3],
+  //   technologies: [
+  //     { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html3" },
+  //     { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css2" },
+  //     { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind2" },
+  //     { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript3" },
+  //     { name: "React", img: React, href: "https://react.dev/", id: "react3" },
+  //     { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer3" }
+  //   ],
+  //   links: [
+  //     { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/coin-up" },
+  //     { name: "Live Preview", img: LiveSite, href: "https://coin-up-devllopeadams-projects.vercel.app/" }
+  //   ]
+  // },
   {
     name: "DevLinks",
     description: "DevLinks is a customizable link-sharing platform where users can easily manage and share their professional links, projects, and social profiles on a single page",
@@ -154,27 +154,84 @@ const projects = [
       { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/dev-links-frontend" },
       { name: "Live Preview", img: LiveSite, href: "https://dev-links-frontend-xi.vercel.app/" }
     ]
+  },
+  {
+    name: "E-Inventory",
+    description: "E-Inventory is a comprehensive SaaS inventory management platform built with modern web technologies. This multi-tenant system features product management, sales tracking, warehouse management, real-time analytics with responsive dashboards, and role-based access control for enterprise-level inventory solutions.",
+    projectImages: [], // Add your E-Inventory project images here
+    isSpecial: true, // Flag to identify this as the special project
+    technologies: [
+      { name: "TypeScript", img: Typescript, href: "https://typescriptlang.org/", id: "typescript-einv" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react-einv" },
+      { name: "Nextjs", img: NextJs, href: "https://nextjs.org", id: "nextjs-einv" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind-einv" },
+      { name: "Shadcn ui", img: ShadcnUi, href: "https://ui.shadcn.com/", id: "shadcn-einv" },
+      { name: "Redux", img: Redux, href: "https://redux-toolkit.js.org/", id: "redux-einv" },
+      { name: "React Hook-Form", img: ReactHookForm, href: "https://react-hook-form.com/", id: "rhf-einv" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer-einv" },
+      { name: "Rest API", img: Api, href: "", id: "api-einv" }
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/E-inventory-app" },
+      { name: "Live Preview", img: LiveSite, href: "https://e-inventory.tech/" }
+    ]
   }
 ];
 
+const skillsCategories = {
+  frontend: [
+    { imgSkill: Html, skill: "HTML5", level: "Advanced", href: "https://developer.mozilla.org/docs/Web/HTML" },
+    { imgSkill: Css, skill: "CSS3", level: "Advanced", href: "https://developer.mozilla.org/docs/Web/CSS" },
+    { imgSkill: Javascript, skill: "JavaScript", level: "Intermediate-Advanced", href: "https://developer.mozilla.org/docs/Web/JavaScript" },
+    { imgSkill: Typescript, skill: "TypeScript", level: "Intermediate-Advanced", href: "https://typescriptlang.org" },
+    { imgSkill: React, skill: "React", level: "Advanced", href: "https://react.dev/" },
+    { imgSkill: NextJs, skill: "Next.js", level: "Intermediate-Advanced", href: "https://nextjs.org/" },
+    { imgSkill: Sass, skill: "Sass/SCSS", level: "Advanced", href: "https://sass-lang.com/" },
+    { imgSkill: Tailwind, skill: "Tailwind CSS", level: "Advanced", href: "https://tailwindcss.com/" },
+    { imgSkill: Bootstrap, skill: "Bootstrap", level: "Advanced", href: "https://getbootstrap.com/" },
+    { imgSkill: ReactHookForm, skill: "React Hook Form", level: "Intermediate-Advanced", href: "https://react-hook-form.com" },
+    { imgSkill: Redux, skill: "Redux Toolkit", level: "Intermediate-Advanced", href: "https://redux-toolkit.js.org/" },
+    { imgSkill: Framer, skill: "Framer Motion", level: "Intermediate", href: "https://www.framer.com/motion/" },
+    { imgSkill: ShadcnUi, skill: "Shadcn/ui", level: "Intermediate-Advanced", href: "https://ui.shadcn.com/" },
+    { imgSkill: Vite, skill: "Vite", level: "Advanced", href: "https://vitejs.dev/" },
+  ],
+  backend: [
+    { imgSkill: NextJs, skill: "Next.js API Routes", level: "Intermediate-Advanced", href: "https://nextjs.org/docs/api-routes/introduction" },
+    { imgSkill: Strapi, skill: "Strapi CMS", level: "Intermediate-Advanced", href: "https://strapi.io/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg", skill: "Supabase", level: "Intermediate", href: "https://supabase.com/" },
+    { imgSkill: Api, skill: "REST APIs", level: "Intermediate-Advanced", href: "https://restfulapi.net/" },
+    { imgSkill: Javascript, skill: "Node.js", level: "Intermediate", href: "https://nodejs.org/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", skill: "Express.js", level: "Intermediate", href: "https://expressjs.com/" },
+    { imgSkill: "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/laravel/laravel-original.svg", skill: "Laravel", level: "Intermediate", href: "https://laravel.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", skill: "MongoDB", level: "Intermediate", href: "https://mongodb.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", skill: "MySQL", level: "Intermediate", href: "https://mysql.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", skill: "PostgreSQL", level: "Intermediate", href: "https://postgresql.org/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg", skill: "Prisma ORM", level: "Intermediate", href: "https://prisma.io/" },
+  ],
+  tools: [
+    { imgSkill: Github, skill: "Git & GitHub", level: "Intermediate-Advanced", href: "https://github.com" },
+    { imgSkill: Gitlab, skill: "GitLab", level: "Intermediate-Advanced", href: "https://gitlab.com" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg", skill: "GitHub Actions", level: "Intermediate", href: "https://github.com/features/actions" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg", skill: "GitLab CI/CD", level: "Intermediate", href: "https://docs.gitlab.com/ee/ci/" },
+    { imgSkill: Figma, skill: "UI/UX Design", level: "Intermediate", href: "https://figma.com/" },
+    { imgSkill: Vite, skill: "Build Tools", level: "Advanced", href: "https://vitejs.dev/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", skill: "Docker", level: "Intermediate", href: "https://docker.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", skill: "Linux/VM Setup", level: "Intermediate", href: "https://linux.org/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg", skill: "Nginx", level: "Intermediate", href: "https://nginx.org/" },
+    { imgSkill: "https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png", skill: "Vercel", level: "Advanced", href: "https://vercel.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg", skill: "Netlify", level: "Advanced", href: "https://netlify.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", skill: "AWS", level: "Basic-Intermediate", href: "https://aws.amazon.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg", skill: "DigitalOcean", level: "Intermediate", href: "https://digitalocean.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", skill: "Firebase", level: "Intermediate", href: "https://firebase.google.com/" },
+    { imgSkill: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg", skill: "Heroku", level: "Intermediate", href: "https://heroku.com/" },
+  ]
+};
+
+// Keep the old skills array for backward compatibility if needed elsewhere
 const skills = [
-  { imgSkill: Html, skill: "HTML", level: "Advanced", href: "https://developer.mozilla.org/fr/docs/Web/html" },
-  { imgSkill: Css, skill: "CSS", level: "Advanced", href: "https://developer.mozilla.org/fr/docs/Web/css" },
-  { imgSkill: Javascript, skill: "JavaScript", level: "Intermediate-Advanced", href: "https://developer.mozilla.org/fr/docs/Web/JavaScript" },
-  { imgSkill: Typescript, skill: "Typescript", level: "Intermediate-Advanced", href: "https://typescriptlang.org" },
-  { imgSkill: Sass, skill: "Sass", level: "Advanced", href: "https://sass-lang.com/" },
-  { imgSkill: Bootstrap, skill: "Bootstrap", level: "Advanced", href: "https://getbootstrap.com/" },
-  { imgSkill: Tailwind, skill: "Tailwind CSS", level: "Advanced", href: "https://tailwindcss.com/" },
-  { imgSkill: Figma, skill: "UI/UX Design", level: "Intermediate", href: "https://figma.com/" },
-  { imgSkill: React, skill: "ReactJS", level: "Advanced", href: "https://react.dev/" },
-  { imgSkill: NextJs, skill: "NextJS", level: "Intermediate-Advanced", href: "https://nextjs.org/" },
-  { imgSkill: ReactHookForm, skill: "React Hook-Form", level: "Intermediate-Advanced", href: "https://react-hook-form.com" },
-  { imgSkill: Redux, skill: "Redux-Toolkit", level: "Intermediate-Advanced", href: "https://redux-toolkit.js.org/" },
-  { imgSkill: Framer, skill: "Framer Motion", level: "Intermediate", href: "https://www.framer.com/motion/" },
-  { imgSkill: ShadcnUi, skill: "Shadcn ui", level: "Intermediate-Advanced", href: "https://ui.shadcn.com/" },
-  { imgSkill: Strapi, skill: "Strapi", level: "Intermediate-Advanced", href: "https://strapi.io/" },
-  { imgSkill: Github, skill: "Git/Github", level: "Intermediate-Advanced", href: "https://github.com" },
-  { imgSkill: Gitlab, skill: "Gitlab", level: "Intermediate-Advanced", href: "https://gitlab.com" },
+  ...skillsCategories.frontend,
+  ...skillsCategories.backend,
+  ...skillsCategories.tools,
 ];
 
 const textScroll = [
@@ -203,6 +260,7 @@ export {
   linksMobile,
   projects,
   skills,
+  skillsCategories,
   textScroll,
   contacts
 };

@@ -1,13 +1,45 @@
 {
-  "name": "portfolio-app-master",
-  "private": true,
-  "version": "0.0.0",
+  "name": "adam-jeniah-portfolio",
+  "description": "Professional portfolio website of Adam Jeniah - Full Stack Developer specializing in React, Next.js, TypeScript, Laravel, and modern web technologies",
+  "version": "2.0.0",
   "type": "module",
+  "keywords": [
+    "Adam Jeniah",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Laravel",
+    "Portfolio",
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "JavaScript Expert",
+    "Morocco Developer",
+    "Freelance Developer"
+  ],
+  "author": {
+    "name": "Adam Jeniah",
+    "email": "jeniahadam@gmail.com",
+    "url": "https://adam-dev-portfolio.vercel.app/"
+  },
+  "homepage": "https://adam-dev-portfolio.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devllopeadam/portfolio-app-master.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devllopeadam/portfolio-app-master/issues",
+    "email": "jeniahadam@gmail.com"
+  },
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "npm run dev"
   },
   "dependencies": {
     "@react-three/fiber": "^8.16.2",

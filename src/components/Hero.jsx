@@ -54,21 +54,55 @@ const Hero = () => {
           ))}
         </motion.div>
         <h1 className="subtitle md:text-7xl text-[54px] font-[700] -mt-[10px]">
-          Frontend Developer
+          Full-Stack Developer
         </h1>
-        <p className="text-[18px] text-[#dfe5ec] mt-6 max-w-[600px] mx-auto">
-          {`Hi there! 👋 I'm Adam, a Frontend Developer based in Morocco,
-          dedicated to crafting beautiful and functional web interfaces that
-          elevate user experiences.`}
+        <p className="text-[18px] text-[#dfe5ec] mt-6 max-w-[650px] mx-auto leading-relaxed">
+          {`Hi there! 👋 I'm Adam, a Full-Stack Freelancer based in Morocco,
+          specializing in crafting complete digital solutions from frontend to backend.
+          With 15+ successful projects delivered and 100% client satisfaction rate,
+          I transform ideas into powerful web applications that drive real business results.`}
         </p>
-        <a
-          href="/Adam%27s-cv.pdf"
-          download="Adam-Jeniah-CV.pdf">
-          <GradientButton
-            text={"Check Out My CV"}
-            otherProperties={"w-fit mx-auto mt-6"}
-          />
-        </a>
+
+        {/* Achievement Stats */}
+        <div className="flex items-center justify-center gap-8 mt-8 mb-6 flex-wrap">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">15+</div>
+            <div className="text-sm text-[#dfe5ec] opacity-80">
+              Projects Delivered
+            </div>
+          </div>
+          <div className="w-px h-12 bg-white/20 max-sm:hidden"></div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">100%</div>
+            <div className="text-sm text-[#dfe5ec] opacity-80">
+              Client Satisfaction
+            </div>
+          </div>
+          <div className="w-px h-12 bg-white/20 max-sm:hidden"></div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">2+</div>
+            <div className="text-sm text-[#dfe5ec] opacity-80">
+              Years Experience
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action Buttons */}
+        <div className="flex items-center justify-center gap-4 mt-6 flex-wrap">
+          <a
+            href="/Adam%27s-cv.pdf"
+            download="Adam-Jeniah-CV.pdf">
+            <GradientButton
+              text={"Download CV"}
+              otherProperties={""}
+            />
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-3 border-2 border-white/30 text-white rounded-lg hover:border-white/60 hover:bg-white/10 transition-all duration-300 font-medium backdrop-blur-sm">
+            Let&apos;s Work Together
+          </a>
+        </div>
       </motion.div>
       <img
         width="897"

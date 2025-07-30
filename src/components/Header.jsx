@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
+import { ArrowBottom, CloseRound, Logo, Menu } from "../assets";
 import { links, linksMobile } from "../constants";
 import ContactButton from "./ContactButton";
-import { ArrowBottom, CloseRound, Logo, Menu } from "../assets";
-import { useEffect, useState } from "react";
 
-const Header = (isVideoPlaying) => {
+const Header = () => {
   const { scrollY } = useScroll();
   const [active, setActive] = useState("");
   const [show, setShow] = useState(false);
