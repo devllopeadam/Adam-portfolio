@@ -13,6 +13,8 @@ import HorizontalScroll from "./HorizontalScroll";
 import ContactMe from "./ContactMe";
 import Footer from "./Footer";
 import Project from "./Project";
+import Services from "./Services";
+import Testimonials from "./Testimonials";
 
 export {
   Header,
@@ -29,5 +31,7 @@ export {
   HorizontalScroll,
   ContactMe,
   Footer,
-  Project
+  Project,
+  Services,
+  Testimonials
 };

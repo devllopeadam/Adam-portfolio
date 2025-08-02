@@ -3,6 +3,7 @@ import { GradientButton, Title } from ".";
 import { Grid } from "../assets";
 import { contacts } from "../constants";
 import { motion } from "framer-motion";
+import { trackButtonClick, trackSocialClick } from "../utils/amplitude";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
@@ -52,13 +53,17 @@ const ContactMe = () => {
                   <GradientButton
                     text={contact.buttonText}
                     link={contact.href}
+                    onClick={() => trackSocialClick(contact.name, contact.href)}
                   />
                 </div>
               ) : (
                 <div className="mt-6">
                   <CopyToClipboard
                     text={contact.href}
-                    onCopy={handleCopy}>
+                    onCopy={() => {
+                      handleCopy();
+                      trackButtonClick("Copy Email", "Contact");
+                    }}>
                     <div
                       className={`group relative z-50 bg-gradient py-3 px-8 text-black cursor-pointer text-base rounded-full font-semibold transition-all duration-200 hover:-translate-y-1 flex items-center justify-center w-fit mx-auto`}>
                       {contact.buttonText}

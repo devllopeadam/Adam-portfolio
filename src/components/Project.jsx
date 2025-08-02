@@ -10,8 +10,9 @@ import {
   RightArrow,
 } from "../assets";
 
-// Import E-Inventory logo
+// Import E-Inventory logo and GymSpace logo
 import EInventoryLogo from "../assets/images/icons/logo-Einventory-large.png";
+import { GymSpaceLogo } from "../assets";
 import Video from "./Video";
 
 const Project = ({
@@ -22,6 +23,9 @@ const Project = ({
   links,
   video,
   isSpecial = false,
+  category = "intermediate",
+  value = "medium",
+  complexity = "intermediate",
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
@@ -62,6 +66,26 @@ const Project = ({
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="relative md:p-6 p-4 backdrop-blur-sm rounded-[20px] bg-white bg-opacity-20 border border-white border-opacity-40 flex flex-col gap-6 max-md:max-w-[455px]">
+        
+        {/* Project Value Badge */}
+        {value === "high" && (
+          <div className="absolute top-4 left-4 z-20">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600/40 to-purple-600/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-blue-400/30">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-pulse"></div>
+              <span className="text-xs font-semibold text-white">Enterprise</span>
+            </div>
+          </div>
+        )}
+        
+        {complexity === "enterprise" && value === "high" && (
+          <div className="absolute top-4 right-4 z-20">
+            <div className="w-8 h-8 bg-gradient-to-r from-emerald-500/40 to-cyan-500/40 backdrop-blur-md rounded-full border border-emerald-400/30 flex items-center justify-center">
+              <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        )}
         {/* {video && (
           <motion.div
             variants={{
@@ -84,9 +108,14 @@ const Project = ({
         <div
           className="overflow-hidden relative"
           ref={emblaRef}>
-          {isSpecial && name === "E-Inventory" ? (
-            // Special display for E-Inventory
-            <div className="min-w-full min-h-[300px] bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-800 rounded-xl flex flex-col items-center justify-center relative overflow-hidden group">
+          {isSpecial && (name === "E-Inventory" || name === "GymSpace") ? (
+            // Special display for professional SaaS projects
+            <div
+              className={`min-w-full min-h-[300px] ${
+                name === "E-Inventory"
+                  ? "bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-800"
+                  : "bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-800"
+              } rounded-xl flex flex-col items-center justify-center relative overflow-hidden group`}>
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-4 left-4 w-20 h-20 border border-white rounded-lg"></div>
@@ -96,28 +125,74 @@ const Project = ({
 
               {/* Logo and Content */}
               <div className="relative z-10 text-center group-hover:scale-105 transition-transform duration-300">
-                <div className="w-48 h-18 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-blue-500/25 group-hover:scale-110 transition-all duration-300 p-4">
-                  <img
-                    src={EInventoryLogo}
-                    alt="E-Inventory Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <p className="text-blue-200 text-lg mb-6 px-4 font-medium">
-                  Multi-Tenant SaaS Platform
+                {name === "E-Inventory" ? (
+                  <div className="w-48 h-18 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-blue-500/25 group-hover:scale-110 transition-all duration-300 p-4">
+                    <img
+                      src={EInventoryLogo}
+                      alt="E-Inventory Logo"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ) : (
+                  // GymSpace Logo
+                  <div className="w-56 h-20 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-emerald-500/25 group-hover:scale-110 transition-all duration-300 p-4">
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={GymSpaceLogo}
+                        alt="GymSpace Logo"
+                        className="w-12 h-12 rounded-xl"
+                      />
+                      <div className="flex flex-col items-start">
+                        <h1 className="text-[25px] font-bold text-gray-800 leading-[1.1] text-nowrap">
+                          Gym Space
+                        </h1>
+                        <p className="text-[11px] text-gray-600">
+                          Gym Management Platform
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <p
+                  className={`${
+                    name === "E-Inventory"
+                      ? "text-blue-200"
+                      : "text-emerald-200"
+                  } text-lg mb-6 px-4 font-medium`}>
+                  {name === "E-Inventory"
+                    ? "Multi-Tenant SaaS Platform"
+                    : "Enterprise Gym Management"}
                 </p>
 
                 {/* Features Pills - Smaller and more refined */}
                 <div className="flex flex-wrap gap-2 justify-center mb-8 px-4">
-                  {["Inventory", "Analytics", "Multi-Tenant", "Real-time"].map(
-                    (feature) => (
-                      <span
-                        key={feature}
-                        className="px-4 py-2 bg-white/25 backdrop-blur-md rounded-full text-white text-sm border border-white/30 hover:bg-white/35 hover:border-white/50 hover:scale-105 transition-all duration-300 font-medium shadow-md">
-                        {feature}
-                      </span>
-                    )
-                  )}
+                  {name === "E-Inventory"
+                    ? [
+                        "Inventory",
+                        "Analytics",
+                        "Multi-Tenant",
+                        "Real-time",
+                      ].map((feature) => (
+                        <span
+                          key={feature}
+                          className="px-4 py-2 bg-white/25 backdrop-blur-md rounded-full text-white text-sm border border-white/30 hover:bg-white/35 hover:border-white/50 hover:scale-105 transition-all duration-300 font-medium shadow-md">
+                          {feature}
+                        </span>
+                      ))
+                    : [
+                        "Member Management",
+                        "Scheduling",
+                        "Billing",
+                        "Analytics",
+                        "Multi-Location",
+                      ].map((feature) => (
+                        <span
+                          key={feature}
+                          className="px-4 py-2 bg-white/25 backdrop-blur-md rounded-full text-white text-sm border border-white/30 hover:bg-white/35 hover:border-white/50 hover:scale-105 transition-all duration-300 font-medium shadow-md">
+                          {feature}
+                        </span>
+                      ))}
                 </div>
               </div>
 
@@ -126,7 +201,12 @@ const Project = ({
                 <a
                   href="#contact"
                   className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500/40 to-cyan-500/40 backdrop-blur-md rounded-full border-2 border-emerald-400/50 flex items-center justify-center hover:scale-110 hover:from-emerald-500/60 hover:to-cyan-500/60 hover:border-emerald-400/80 transition-all duration-300 shadow-lg hover:shadow-emerald-500/30 cursor-pointer">
+                  <div
+                    className={`w-12 h-12 ${
+                      name === "E-Inventory"
+                        ? "bg-gradient-to-r from-emerald-500/40 to-cyan-500/40 border-emerald-400/50 hover:from-emerald-500/60 hover:to-cyan-500/60 hover:border-emerald-400/80 hover:shadow-emerald-500/30"
+                        : "bg-gradient-to-r from-blue-500/40 to-purple-500/40 border-blue-400/50 hover:from-blue-500/60 hover:to-purple-500/60 hover:border-blue-400/80 hover:shadow-blue-500/30"
+                    } backdrop-blur-md rounded-full border-2 flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg cursor-pointer`}>
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -139,7 +219,12 @@ const Project = ({
                         d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
+                    <div
+                      className={`absolute -top-1 -right-1 w-4 h-4 ${
+                        name === "E-Inventory"
+                          ? "bg-emerald-400 shadow-emerald-400/50"
+                          : "bg-blue-400 shadow-blue-400/50"
+                      } rounded-full animate-pulse shadow-lg`}></div>
                   </div>
 
                   {/* Tooltip - Compact and professional */}
@@ -194,7 +279,7 @@ const Project = ({
             </motion.div>
           )}
         </div>
-        {!(isSpecial && name === "E-Inventory") && (
+        {!(isSpecial && (name === "E-Inventory" || name === "GymSpace")) && (
           <div className="-mt-11 flex items-center gap-4 justify-center relative z-10">
             <button
               onClick={scrollNext}
@@ -219,9 +304,22 @@ const Project = ({
           </div>
         )}
         <div className="flex flex-col gap-2">
-          <h3 className="text-[20px] font-bold text-white text-center">
-            {name}
-          </h3>
+          <div className="flex items-center justify-between">
+            <h3 className="text-[20px] font-bold text-white">
+              {name}
+            </h3>
+            {/* Category Badge */}
+            <div className={`px-2 py-1 rounded-md text-xs font-medium ${
+              category === "professional" 
+                ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                : category === "intermediate"
+                ? "bg-purple-500/20 text-purple-300 border border-purple-500/30"
+                : "bg-gray-500/20 text-gray-300 border border-gray-500/30"
+            }`}>
+              {category === "professional" ? "Professional" : 
+              category === "intermediate" ? "Intermediate" : "Learning"}
+            </div>
+          </div>
           <p className="text-[#dfe5ecca] text-[14px] font-medium w-full">
             {description}
           </p>

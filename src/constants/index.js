@@ -1,144 +1,81 @@
 /* eslint-disable no-unused-vars */
-import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab, Figma, DevlinksVideo, Vite } from "../assets";
+import { Api, Audiofile, Bootstrap, CoinUp, Css, Dictionary, Framer, Github, GithubUserSearch, Html, Javascript, Typescript, LiveSite, Pomorodo, Quiz, React, ReactRounterDom, Sass, Tailwind, NextJs, Strapi, ReactHookForm, RestCountriesApi1, RestCountriesApi2, DictionaryTablet, DictionaryMobile, QuizQuestions, QuizTablet, QuizMobile, GithubTablet, GithubMobile, PomorodoSettings, PomorodoTablet, PomorodoMobile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile, CoinUp1, CoinUp2, CoinUp3, DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister, ShadcnUi, Redux, Gitlab, Figma, DevlinksVideo, Vite, GymSpaceLogo } from "../assets";
 
 const links = [
   { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "About Me", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Testimonials", href: "#testimonials" },
 ];
 
 
 const linksMobile = [
   { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "About Me", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
 const projects = [
   {
-    name: "REST Countries API with color theme switcher",
-    description: "Built a user-friendly country data app using the REST Countries V2 API to show detailed country info in an easy way.",
-    projectImages: [RestCountriesApi1, RestCountriesApi2],
+    name: "GymSpace",
+    description: "Enterprise-grade gym management SaaS platform featuring comprehensive member management, intelligent scheduling system, subscription billing, real-time analytics dashboard, and multi-location support. Built for gym owners who need professional tools to scale their fitness business efficiently.",
+    projectImages: [], // Add your GymSpace project images here
+    isSpecial: true, // Flag to identify this as a special professional project
+    category: "professional", // professional, intermediate, learning
+    value: "high", // high, medium, low
+    complexity: "enterprise", // enterprise, intermediate, basic
     technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html1" },
-      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass1" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript1" },
-      { name: "React", img: React, href: "https://react.dev/", id: "3" },
-      { name: "React Router DOM", img: ReactRounterDom, href: "https://reactrouter.com/", id: "reactdom" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer1" },
-      { name: "Rest API", img: Api, href: "", id: "API1" }
+      { name: "TypeScript", img: Typescript, href: "https://typescriptlang.org/", id: "typescript-gym" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react-gym" },
+      { name: "Nextjs", img: NextJs, href: "https://nextjs.org", id: "nextjs-gym" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind-gym" },
+      { name: "Shadcn ui", img: ShadcnUi, href: "https://ui.shadcn.com/", id: "shadcn-gym" },
+      { name: "Redux", img: Redux, href: "https://redux-toolkit.js.org/", id: "redux-gym" },
+      { name: "React Hook-Form", img: ReactHookForm, href: "https://react-hook-form.com/", id: "rhf-gym" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer-gym" },
+      { name: "Rest API", img: Api, href: "", id: "api-gym" }
     ],
     links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Rest-Countries-API" },
-      { name: "Live Preview", img: LiveSite, href: "https://rest-countries-api-green-ten.vercel.app/" }
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/gymspace-frontend" },
+      { name: "Live Preview", img: LiveSite, href: "#" } // Update with actual live URL when deployed
     ]
   },
   {
-    name: "Dictionary App with color theme switcher",
-    description: "Access a wealth of definitions effortlessly with our sleek dictionary web app interface.",
-    projectImages: [Dictionary, DictionaryTablet, DictionaryMobile],
+    name: "E-Inventory",
+    description: "E-Inventory is a comprehensive SaaS inventory management platform built with modern web technologies. This multi-tenant system features product management, sales tracking, warehouse management, real-time analytics with responsive dashboards, and role-based access control for enterprise-level inventory solutions.",
+    projectImages: [], // Add your E-Inventory project images here
+    isSpecial: true, // Flag to identify this as the special project
+    category: "professional", // professional, intermediate, learning
+    value: "high", // high, medium, low
+    complexity: "enterprise", // enterprise, intermediate, basic
     technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html2" },
-      { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css1" },
-      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind1" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript2" },
-      { name: "React", img: React, href: "https://react.dev/", id: "react2" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer2" },
-      { name: "Rest API", img: Api, href: "", id: "API2" }
+      { name: "TypeScript", img: Typescript, href: "https://typescriptlang.org/", id: "typescript-einv" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react-einv" },
+      { name: "Nextjs", img: NextJs, href: "https://nextjs.org", id: "nextjs-einv" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind-einv" },
+      { name: "Shadcn ui", img: ShadcnUi, href: "https://ui.shadcn.com/", id: "shadcn-einv" },
+      { name: "Redux", img: Redux, href: "https://redux-toolkit.js.org/", id: "redux-einv" },
+      { name: "React Hook-Form", img: ReactHookForm, href: "https://react-hook-form.com/", id: "rhf-einv" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer-einv" },
+      { name: "Rest API", img: Api, href: "", id: "api-einv" }
     ],
     links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/dictionary-app-main" },
-      { name: "Live Preview", img: LiveSite, href: "https://dictionary-app-main.vercel.app/" }
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/E-inventory-app" },
+      { name: "Live Preview", img: LiveSite, href: "https://e-inventory.tech/" }
     ]
   },
-  {
-    name: "Frontend Quiz app with color theme switcher",
-    description: "Crafted an interactive Frontend Quiz App featuring a color theme switcher, enhancing user engagement while showcasing frontend development prowess",
-    projectImages: [Quiz, QuizQuestions, QuizTablet, QuizMobile],
-    technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html4" },
-      { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css3" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript4" },
-    ],
-    links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Quiz-App" },
-      { name: "Live Preview", img: LiveSite, href: "https://devllopeadam.github.io/Quiz-App//" }
-    ]
-  },
-  {
-    name: "GitHub User search app color theme switcher",
-    description: "Developed a dynamic GitHub User Profile Viewer leveraging the GitHub Users API, offering a seamless display of user profiles with comprehensive information",
-    projectImages: [GithubUserSearch, GithubTablet, GithubMobile],
-    technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html5" },
-      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass2" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript5" },
-      { name: "React", img: React, href: "https://react.dev/", id: "react4" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer4" },
-      { name: "Rest API", img: Api, href: "", id: "API2" }
-    ],
-    links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Github-user-search-" },
-      { name: "Live Preview", img: LiveSite, href: "https://github-user-search-nc1h.vercel.app/" }
-    ]
-  },
-  {
-    name: "Pomodoro app",
-    description: "an open-source project helps you harness the Pomodoro Technique to accomplish more in less time to supercharge your productivity!",
-    projectImages: [Pomorodo, PomorodoSettings, PomorodoTablet, PomorodoMobile],
-    technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html6" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript6" },
-      { name: "React", img: React, href: "https://react.dev/", id: "react5" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer5" },
-      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass3" },
-
-    ],
-    links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/pomorodo-app" },
-      { name: "Live Preview", img: LiveSite, href: "https://pomorodo-app.vercel.app/" }
-    ]
-  },
-  {
-    name: "Audiophile e-commerce website",
-    description: "Revolutionizing online audio shopping with React, Vite, and Tailwind CSS.Seamlessly immersive, just like a real store.",
-    projectImages: [Audiofile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile],
-    technologies: [
-      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html7" },
-      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript7" },
-      { name: "React", img: React, href: "https://react.dev/", id: "react6" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer6" },
-      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind3" },
-      { name: "React Router DOM", img: ReactRounterDom, href: "https://reactrouter.com/", id: "reactdom1" },
-    ],
-    links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/e-commerce-app-master" },
-      { name: "Live Preview", img: LiveSite, href: "https://e-commerce-app-master.vercel.app/" }
-    ]
-  },
-  // {
-  //   name: "CoinUp",
-  //   description: "CoinUp: Your go-to Crypto Wallet SaaS Website, empowering businesses to enter the crypto wallet market and elevate user experience.",
-  //   projectImages: [CoinUp, CoinUp1, CoinUp2, CoinUp3],
-  //   technologies: [
-  //     { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html3" },
-  //     { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css2" },
-  //     { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind2" },
-  //     { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript3" },
-  //     { name: "React", img: React, href: "https://react.dev/", id: "react3" },
-  //     { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer3" }
-  //   ],
-  //   links: [
-  //     { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/coin-up" },
-  //     { name: "Live Preview", img: LiveSite, href: "https://coin-up-devllopeadams-projects.vercel.app/" }
-  //   ]
-  // },
   {
     name: "DevLinks",
     description: "DevLinks is a customizable link-sharing platform where users can easily manage and share their professional links, projects, and social profiles on a single page",
     projectImages: [DevlinksLinks, DevlinksPreview, DevlinksProfile, DevlinksLogin, DevlinksRegister],
     video: DevlinksVideo,
+    category: "professional", // professional, intermediate, learning
+    value: "high", // high, medium, low
+    complexity: "intermediate", // enterprise, intermediate, basic
     technologies: [
       { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css2" },
       { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind2" },
@@ -156,24 +93,122 @@ const projects = [
     ]
   },
   {
-    name: "E-Inventory",
-    description: "E-Inventory is a comprehensive SaaS inventory management platform built with modern web technologies. This multi-tenant system features product management, sales tracking, warehouse management, real-time analytics with responsive dashboards, and role-based access control for enterprise-level inventory solutions.",
-    projectImages: [], // Add your E-Inventory project images here
-    isSpecial: true, // Flag to identify this as the special project
+    name: "REST Countries API with color theme switcher",
+    description: "Built a user-friendly country data app using the REST Countries V2 API to show detailed country info in an easy way.",
+    projectImages: [RestCountriesApi1, RestCountriesApi2],
+    category: "intermediate", // professional, intermediate, learning
+    value: "medium", // high, medium, low
+    complexity: "intermediate", // enterprise, intermediate, basic
     technologies: [
-      { name: "TypeScript", img: Typescript, href: "https://typescriptlang.org/", id: "typescript-einv" },
-      { name: "React", img: React, href: "https://react.dev/", id: "react-einv" },
-      { name: "Nextjs", img: NextJs, href: "https://nextjs.org", id: "nextjs-einv" },
-      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind-einv" },
-      { name: "Shadcn ui", img: ShadcnUi, href: "https://ui.shadcn.com/", id: "shadcn-einv" },
-      { name: "Redux", img: Redux, href: "https://redux-toolkit.js.org/", id: "redux-einv" },
-      { name: "React Hook-Form", img: ReactHookForm, href: "https://react-hook-form.com/", id: "rhf-einv" },
-      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer-einv" },
-      { name: "Rest API", img: Api, href: "", id: "api-einv" }
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html1" },
+      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass1" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript1" },
+      { name: "React", img: React, href: "https://react.dev/", id: "3" },
+      { name: "React Router DOM", img: ReactRounterDom, href: "https://reactrouter.com/", id: "reactdom" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer1" },
+      { name: "Rest API", img: Api, href: "", id: "API1" }
     ],
     links: [
-      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/E-inventory-app" },
-      { name: "Live Preview", img: LiveSite, href: "https://e-inventory.tech/" }
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Rest-Countries-API" },
+      { name: "Live Preview", img: LiveSite, href: "https://rest-countries-api-green-ten.vercel.app/" }
+    ]
+  },
+  {
+    name: "Audiophile e-commerce website",
+    description: "Revolutionizing online audio shopping with React, Vite, and Tailwind CSS.Seamlessly immersive, just like a real store.",
+    projectImages: [Audiofile, AudiofilePages, AudiofileCheckout, AudiofileTablet, AudiofileMobile],
+    category: "intermediate", // professional, intermediate, learning
+    value: "medium", // high, medium, low
+    complexity: "intermediate", // enterprise, intermediate, basic
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html7" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript7" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react6" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer6" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind3" },
+      { name: "React Router DOM", img: ReactRounterDom, href: "https://reactrouter.com/", id: "reactdom1" },
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/e-commerce-app-master" },
+      { name: "Live Preview", img: LiveSite, href: "https://e-commerce-app-master.vercel.app/" }
+    ]
+  },
+  {
+    name: "Dictionary App with color theme switcher",
+    description: "Access a wealth of definitions effortlessly with our sleek dictionary web app interface.",
+    projectImages: [Dictionary, DictionaryTablet, DictionaryMobile],
+    category: "intermediate", // professional, intermediate, learning
+    value: "medium", // high, medium, low
+    complexity: "intermediate", // enterprise, intermediate, basic
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html2" },
+      { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css1" },
+      { name: "Tailwind", img: Tailwind, href: "https://tailwindcss.com/", id: "tailwind1" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript2" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react2" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer2" },
+      { name: "Rest API", img: Api, href: "", id: "API2" }
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/dictionary-app-main" },
+      { name: "Live Preview", img: LiveSite, href: "https://dictionary-app-main.vercel.app/" }
+    ]
+  },
+  {
+    name: "GitHub User search app color theme switcher",
+    description: "Developed a dynamic GitHub User Profile Viewer leveraging the GitHub Users API, offering a seamless display of user profiles with comprehensive information",
+    projectImages: [GithubUserSearch, GithubTablet, GithubMobile],
+    category: "intermediate", // professional, intermediate, learning
+    value: "medium", // high, medium, low
+    complexity: "intermediate", // enterprise, intermediate, basic
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html5" },
+      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass2" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript5" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react4" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer4" },
+      { name: "Rest API", img: Api, href: "", id: "API2" }
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Github-user-search-" },
+      { name: "Live Preview", img: LiveSite, href: "https://github-user-search-nc1h.vercel.app/" }
+    ]
+  },
+  {
+    name: "Pomodoro app",
+    description: "an open-source project helps you harness the Pomodoro Technique to accomplish more in less time to supercharge your productivity!",
+    projectImages: [Pomorodo, PomorodoSettings, PomorodoTablet, PomorodoMobile],
+    category: "learning", // professional, intermediate, learning
+    value: "low", // high, medium, low
+    complexity: "basic", // enterprise, intermediate, basic
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html6" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript6" },
+      { name: "React", img: React, href: "https://react.dev/", id: "react5" },
+      { name: "Framer Motion", img: Framer, href: "https://www.framer.com/motion/", id: "framer5" },
+      { name: "Sass", img: Sass, href: "https://sass-lang.com/", id: "sass3" },
+
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/pomorodo-app" },
+      { name: "Live Preview", img: LiveSite, href: "https://pomorodo-app.vercel.app/" }
+    ]
+  },
+  {
+    name: "Frontend Quiz app with color theme switcher",
+    description: "Crafted an interactive Frontend Quiz App featuring a color theme switcher, enhancing user engagement while showcasing frontend development prowess",
+    projectImages: [Quiz, QuizQuestions, QuizTablet, QuizMobile],
+    category: "learning", // professional, intermediate, learning
+    value: "low", // high, medium, low
+    complexity: "basic", // enterprise, intermediate, basic
+    technologies: [
+      { name: "HTML", img: Html, href: "https://developer.mozilla.org/fr/docs/Web/html", id: "html4" },
+      { name: "CSS", img: Css, href: "https://developer.mozilla.org/fr/docs/Web/css", id: "css3" },
+      { name: "Javascript", img: Javascript, href: "https://developer.mozilla.org/fr/docs/Web/JavaScript", id: "javascript4" },
+    ],
+    links: [
+      { name: "Github Repo", img: Github, href: "https://github.com/devllopeadam/Quiz-App" },
+      { name: "Live Preview", img: LiveSite, href: "https://devllopeadam.github.io/Quiz-App//" }
     ]
   }
 ];
@@ -255,6 +290,64 @@ const contacts = [
   { title: "LinkedIn", subtitle: "in/adam-jeniah", buttonText: "Visit my LinkedIn", href: "https://www.linkedin.com/in/adam-jeniah/", type: "simple" },
 ];
 
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Hicham Achkif",
+    position: "Owner & Founder",
+    company: "Sumatra IT Services",
+    companyLogo:
+      "https://media.licdn.com/dms/image/v2/C4D0BAQHrZuchbacs0w/company-logo_200_200/company-logo_200_200/0/1651416968764?e=2147483647&v=beta&t=1VKl3sCqGHQWsw6gc-sZTJqGNpSCTOOxgiE3F_QueT8",
+    profileImage:
+      "https://media.licdn.com/dms/image/v2/D4D03AQHDXql3k63rRg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1640784822391?e=1756944000&v=beta&t=MVdcfZGVZuu5zhkcT8kEU9tgQpMKUghkEl3_8WanpfY",
+    review:
+      "Adam delivered exceptional results for our enterprise clients. His problem-solving approach and clean UI/UX design helped us increase client satisfaction by 40%. The scalable solutions he built continue to serve our growing business needs perfectly.",
+    rating: 5,
+    project: "Enterprise SaaS Platform",
+    linkedin: "https://www.linkedin.com/in/hicham-achkif-32789716/",
+    companyUrl: "https://www.linkedin.com/company/sumatra-it-services/",
+    gradient: "from-blue-600 to-purple-600",
+    bgGradient: "from-blue-50 to-purple-50",
+  },
+  {
+    id: 2,
+    name: "Joseph Henry Nkeng ",
+    position: "Owner & CEO",
+    company: "Valhko",
+    companyLogo:
+      "https://media.licdn.com/dms/image/v2/D4E0BAQFjr-5T2OuIMA/company-logo_200_200/company-logo_200_200/0/1686154927647/valhko_logo?e=1756944000&v=beta&t=BuFL4XR9PRvgMfzVHhRl0Gtuv2U2YO4RLI-7avO8ywk",
+    profileImage:
+      "https://media.licdn.com/dms/image/v2/C4D03AQHmhIk4j4rYRA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582977759934?e=1756944000&v=beta&t=RRsiECWMBq_o6Q9RihHz29TVJS98DW_X0q2aCkNv6kc",
+    review:
+      "Working with Adam was a game-changer for our startup. He transformed our complex requirements into intuitive, user-friendly interfaces. His attention to detail and modern development practices helped us launch ahead of schedule with zero technical debt.",
+    rating: 5,
+    project: "Startup MVP Development",
+    linkedin: "https://www.linkedin.com/in/jhnkeng/",
+    companyUrl: "https://www.linkedin.com/company/79564814/",
+    gradient: "from-emerald-600 to-teal-600",
+    bgGradient: "from-emerald-50 to-teal-50",
+  },
+  {
+    id: 3,
+    name: "Mohammed Chairi Mahjor",
+    position: "Owner & Software Engineer",
+    company: "Flex Business",
+    companyLogo:
+      "https://media.licdn.com/dms/image/v2/C4E0BAQETBH8-BA7pfQ/company-logo_200_200/company-logo_200_200/0/1661381457416?e=2147483647&v=beta&t=egGog_55WamslIvFha3eZ5Yv1jsI1KIDoGhM0lzN3Jc",
+    profileImage:
+      "https://media.licdn.com/dms/image/v2/D4E03AQG5cJ-SWrFzBw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1703069121644?e=2147483647&v=beta&t=GKDI-6UsW1hbV8lHQRYCyDpL8iBN3emw706Hr33ZwFI",
+    review:
+      "Adam's technical expertise is outstanding. He not only delivered a robust business management system but also provided innovative solutions to complex challenges we hadn't even considered. His clean code architecture and responsive design exceeded all expectations.",
+    rating: 5,
+    project: "Business Management System",
+    linkedin: "https://www.linkedin.com/in/mohammed-chairi-mahjor-99687250/",
+    companyUrl: "https://www.linkedin.com/company/fl-x/",
+    gradient: "from-orange-600 to-red-600",
+    bgGradient: "from-orange-50 to-red-50",
+  },
+];
+
 export {
   links,
   linksMobile,
@@ -262,5 +355,6 @@ export {
   skills,
   skillsCategories,
   textScroll,
-  contacts
+  contacts,
+  testimonials
 };

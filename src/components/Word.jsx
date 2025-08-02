@@ -2,32 +2,28 @@
 /* eslint-disable react/prop-types */
 import {
   motion,
+  useInView,
+  useMotionValueEvent,
   useScroll,
   useTransform,
-  useInView,
-  useSpring,
-  transform,
-  useMotionValueEvent,
 } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useRef } from "react";
-import Cursor from "./Cursor";
+import { useRef, useState } from "react";
 
 const words = [
-  { label: "I'm" },
-  { label: "front-end", type: "gradient" },
-  { label: "developer" },
-  { label: "driven" },
-  { label: "by" },
-  { label: "a" },
-  { label: "passion" },
-  { label: "for" },
-  { label: "creating" },
-  { label: "beautiful" },
+  { label: "I" },
+  { label: "help", type: "gradient" },
+  { label: "teams" },
+  { label: "turn" },
+  { label: "ideas", type: "gradient" },
+  { label: "into" },
+  { label: "working" },
+  { label: "products", type: "gradient" },
+  { label: "using" },
+  { label: "clean" },
+  { label: "code" },
   { label: "and" },
-  { label: "innovative" },
-  { label: "user" },
-  { label: "interfaces." },
+  { label: "fast", type: "gradient" },
+  { label: "execution." },
 ];
 
 const Word = () => {
@@ -60,12 +56,12 @@ const Word = () => {
       onMouseLeave={() => setCursorVariant("default")}
       ref={element}
       className="lg:text-[78px] max-md:max-w-[550px] mx-auto max-lg:max-w-[650px] md:text-[40px] text-[40px] font-semibold mt-6 flex max-md:gap-2 flex-wrap items-center justify-center relative">
-      <p className="md:block hidden text-[90px] absolute -left-[40px] top-[100px]">
+      <span className="md:block hidden text-[90px] absolute -left-[40px] top-[100px]">
         🎉
-      </p>
-      <p className="md:block hidden text-[90px] absolute -right-[30px] bottom-[60px] rotate-[275deg]">
+      </span>
+      <span className="md:block hidden text-[90px] absolute -right-[30px] bottom-[60px] rotate-[275deg]">
         🎉
-      </p>
+      </span>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;

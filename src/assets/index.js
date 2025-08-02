@@ -11,6 +11,7 @@ import RightArrow from "./images/icons/right-arrow.svg";
 import LeftArrow from "./images/icons/left-arrow.svg";
 import PlayVideo from "./images/icons/play-video.svg";
 import Close from "./images/icons/close.svg";
+import GymSpaceLogo from "./images/icons/logo-black-small.svg";
 
 import Grid from "./images/patterns/grid.webp";
 // Technologies
@@ -84,6 +85,7 @@ export {
   PlayVideo,
   Close,
   Grid,
+  GymSpaceLogo,
   Sass,
   React,
   Tailwind,

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowBottom, CloseRound, Logo, Menu } from "../assets";
 import { links, linksMobile } from "../constants";
 import ContactButton from "./ContactButton";
+import { trackNavigationClick } from "../utils/amplitude";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -57,7 +58,10 @@ const Header = () => {
               {links.map((link) => {
                 return (
                   <a
-                    onClick={() => setActive(link.label)}
+                    onClick={() => {
+                      setActive(link.label);
+                      trackNavigationClick(link.label, link.href);
+                    }}
                     className={`text-[16.5px] duration-300 font-normal ${
                       active === link.label
                         ? "opacity-100"
@@ -101,6 +105,7 @@ const Header = () => {
                     setIsScrolling(!isScrolling);
                     setShowIsScroll(!showIsScroll);
                     setActive(link.label);
+                    trackNavigationClick(link.label, link.href);
                   }}
                   className={`group text-[30px] duration-300 font-medium relative flex items-start gap-3 ${
                     active === link.label

@@ -42,6 +42,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^2.21.1",
     "@react-three/fiber": "^8.16.2",
     "embla-carousel-react": "^8.3.1",
     "framer-motion": "^11.1.3",

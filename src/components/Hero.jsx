@@ -13,6 +13,7 @@ import {
 } from "../assets";
 import TechnologieBox from "./TechnologieBox";
 import GradientButton from "./GradientButton";
+import { trackButtonClick } from "../utils/amplitude";
 
 const Hero = () => {
   const texts = ["An Extra", "A Creative", "An Amazing"];
@@ -27,7 +28,7 @@ const Hero = () => {
       }
     }, 4500);
     return () => clearInterval(id);
-  }, [count]);
+  }, [count, texts.length]);
 
   return (
     <div className="w-full max-lg:-z-[1] z-[10] relative">
@@ -57,10 +58,10 @@ const Hero = () => {
           Full-Stack Developer
         </h1>
         <p className="text-[18px] text-[#dfe5ec] mt-6 max-w-[650px] mx-auto leading-relaxed">
-          {`Hi there! 👋 I'm Adam, a Full-Stack Freelancer based in Morocco,
-          specializing in crafting complete digital solutions from frontend to backend.
-          With 15+ successful projects delivered and 100% client satisfaction rate,
-          I transform ideas into powerful web applications that drive real business results.`}
+          I build modern web applications for companies that need speed,
+          reliability, and clean UI. Specializing in React, Next.js, and
+          full-stack solutions that turn your ideas into working products with
+          fast execution and clean code.
         </p>
 
         {/* Achievement Stats */}
@@ -88,20 +89,19 @@ const Hero = () => {
         </div>
 
         {/* Call to Action Buttons */}
-        <div className="flex items-center justify-center gap-4 mt-6 flex-wrap">
-          <a
-            href="/Adam%27s-cv.pdf"
-            download="Adam-Jeniah-CV.pdf">
-            <GradientButton
-              text={"Download CV"}
-              otherProperties={""}
-            />
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 border-2 border-white/30 text-white rounded-lg hover:border-white/60 hover:bg-white/10 transition-all duration-300 font-medium backdrop-blur-sm">
-            Let&apos;s Work Together
-          </a>
+        <div className="flex items-center justify-center gap-4 mt-6 flex-wrap max-w-[500px] mx-auto">
+          <GradientButton
+            text={"Let's Work Together"}
+            link="#contact"
+            onclick={() => trackButtonClick("Let's Work Together", "Hero")}
+            variant="gradient"
+          />
+          <GradientButton
+            text="Download CV"
+            link="/adam-jeniah.pdf"
+            onclick={() => trackButtonClick("Download CV", "Hero")}
+            variant="outline"
+          />
         </div>
       </motion.div>
       <img
